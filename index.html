@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Accounting</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-chart-pie"></i> Stackly
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+<a href="about.html" class="">About</a>
+<a href="services.html" class="">Services</a>
+<a href="blog.html" class="">Blog</a>
+<a href="contact.html" class="">Contact</a>
+
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <div class="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+<!-- Section 1: Hero -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-content" data-aos="fade-right">
+            <h1>Smarter Accounting. <br><span style="color:var(--accent);">Stronger Financial Decisions.</span></h1>
+            <p>We help businesses expertly manage accounting, taxation, compliance, and comprehensive financial planning for long-term success.</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+                <a href="services.html" class="btn btn-outline">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="200" style="position:relative;">
+            <img src="images/stackly_img_23.webp" alt="Financial Planning" loading="lazy">
+            <!-- Subtle floating financial element -->
+            <div style="position:absolute; bottom:-1.5rem; left:-2rem; background:var(--bg-white); padding:1rem 1.5rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:1rem; animation: float 4s ease-in-out infinite; z-index:10;">
+                <div style="width:45px; height:45px; background:rgba(16, 185, 129, 0.1); color:#10B981; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+                <div>
+                    <p style="margin:0; font-weight:800; color:var(--primary); line-height:1.2; font-size:1.25rem;">+24%</p>
+                    <p style="margin:0; font-size:0.85rem; color:var(--text-light); font-weight:500;">Tax Optimization</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Trust / Statistics -->
+<section class="section section-white">
+    <div class="container grid-4" data-aos="fade-up">
+        <div class="stat-item">
+            <h2 data-target="500">500+</h2>
+            <p>Clients</p>
+        </div>
+        <div class="stat-item">
+            <h2 data-target="10">10+</h2>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <h2 data-target="98">98%</h2>
+            <p>Client Satisfaction</p>
+        </div>
+        <div class="stat-item">
+            <h2 data-target="25">25+</h2>
+            <p>Financial Experts</p>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Services Preview -->
+<section class="section section-light">
+    <div class="container">
+        <div style="text-align:center; margin-bottom: 2rem;" data-aos="zoom-in-up" data-aos-duration="800">
+            <h2>Premium Financial Services</h2>
+            <p style="max-width:600px; margin:0 auto; color:var(--text-light);">Comprehensive accounting and advisory solutions tailored to drive your business forward.</p>
+        </div>
+        
+        <div class="grid-3">
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="100">
+                <i class="fa-solid fa-file-invoice-dollar card-icon"></i>
+                <h3>Accounting & Bookkeeping</h3>
+                <p>Accurate and timely financial recording to keep your business running smoothly.</p>
+                <a href="404.html" class="card-link">Learn More </a>
+            </div>
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="200">
+                <i class="fa-solid fa-scale-balanced card-icon"></i>
+                <h3>Tax Planning</h3>
+                <p>Strategic tax optimization to minimize liability and maximize returns.</p>
+                <a href="404.html" class="card-link">Learn More </a>
+            </div>
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300">
+                <i class="fa-solid fa-money-check-dollar card-icon"></i>
+                <h3>Payroll Management</h3>
+                <p>Automated payroll processing, tax filings, and strict regulatory compliance.</p>
+                <a href="404.html" class="card-link">Learn More </a>
+            </div>
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="400">
+                <i class="fa-solid fa-chart-line card-icon"></i>
+                <h3>Financial Consulting</h3>
+                <p>Expert advisory services to guide your business towards sustainable growth.</p>
+                <a href="404.html" class="card-link">Learn More </a>
+            </div>
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="500">
+                <i class="fa-solid fa-magnifying-glass-chart card-icon"></i>
+                <h3>Audit & Compliance</h3>
+                <p>Internal audits, risk assessments, and independent financial verification.</p>
+                <a href="404.html" class="card-link">Learn More </a>
+            </div>
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="600">
+                <i class="fa-solid fa-briefcase card-icon"></i>
+                <h3>Business Advisory</h3>
+                <p>Strategic planning, M&A advisory, and operational efficiency analysis.</p>
+                <a href="404.html" class="card-link">Learn More </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Why Choose Us -->
+<section class="section section-white">
+    <div class="container grid-2">
+        <div data-aos="fade-right">
+            <img src="images/stackly_img_24.webp" alt="Professional Financial Meeting" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);" loading="lazy">
+        </div>
+        <div>
+            <h2 data-aos="fade-left">Why Businesses Trust Us</h2>
+            <p data-aos="fade-left" data-aos-delay="100">We combine deep industry expertise with innovative technology to deliver exceptional financial results.</p>
+            
+            <ul style="list-style:none; margin-top:2rem;">
+                <li style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;" data-aos="fade-left" data-aos-delay="150">
+                    <div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
+                    <h4 style="margin:0; font-size:1.1rem;">Experienced Professionals</h4>
+                </li>
+                <li style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;" data-aos="fade-left" data-aos-delay="250">
+                    <div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
+                    <h4 style="margin:0; font-size:1.1rem;">Transparent Processes</h4>
+                </li>
+                <li style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;" data-aos="fade-left" data-aos-delay="350">
+                    <div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
+                    <h4 style="margin:0; font-size:1.1rem;">Accurate Reporting</h4>
+                </li>
+                <li style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;" data-aos="fade-left" data-aos-delay="450">
+                    <div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
+                    <h4 style="margin:0; font-size:1.1rem;">Strategic Financial Guidance</h4>
+                </li>
+                <li style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;" data-aos="fade-left" data-aos-delay="550">
+                    <div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
+                    <h4 style="margin:0; font-size:1.1rem;">Secure & Confidential</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Financial Solutions -->
+<section class="section section-dark">
+    <div class="container">
+        <div style="text-align:center; margin-bottom: 2rem;" data-aos="fade-up">
+            <h2>Financial Solutions</h2>
+            <p style="max-width:600px; margin:0 auto;">How we actively transform your financial operations.</p>
+        </div>
+        
+        <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+            <div class="card" style="flex: 1 1 30%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-arrow-up-right-dots" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+                <h3 style="color:white; font-size:1.2rem;">Improve Cash Flow</h3>
+                <p style="color:#8892B0; margin:0;">Optimize receivables and payables for better liquidity.</p>
+            </div>
+            <div class="card" style="flex: 1 1 30%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;" data-aos="zoom-in" data-aos-delay="200">
+                <i class="shake-target fa-solid fa-shield-halved" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+                <h3 style="color:white; font-size:1.2rem;">Reduce Financial Risks</h3>
+                <p style="color:#8892B0; margin:0;">Identify and mitigate vulnerabilities in your financial strategy.</p>
+            </div>
+            <div class="card" style="flex: 1 1 30%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;" data-aos="zoom-in" data-aos-delay="300">
+                <i class="shake-target fa-solid fa-clipboard-check" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+                <h3 style="color:white; font-size:1.2rem;">Simplify Compliance</h3>
+                <p style="color:#8892B0; margin:0;">Navigate complex tax laws and regulations effortlessly.</p>
+            </div>
+            <div class="card" style="flex: 1 1 40%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem; max-width:48%;" data-aos="zoom-in" data-aos-delay="400">
+                <i class="shake-target fa-solid fa-chart-pie" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+                <h3 style="color:white; font-size:1.2rem;">Understand Performance</h3>
+                <p style="color:#8892B0; margin:0;">Gain clear insights into your business metrics and profitability drivers.</p>
+            </div>
+            <div class="card" style="flex: 1 1 40%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem; max-width:48%;" data-aos="zoom-in" data-aos-delay="500">
+                <i class="shake-target fa-solid fa-seedling" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+                <h3 style="color:white; font-size:1.2rem;">Plan Future Growth</h3>
+                <p style="color:#8892B0; margin:0;">Develop robust financial forecasting and strategic scaling plans.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Process -->
+<section class="section section-light">
+    <div class="container">
+        <div style="text-align:center; margin-bottom: 2rem;" data-aos="fade-up">
+            <h2>Our Proven Process</h2>
+            <p style="max-width:600px; margin:0 auto; color:var(--text-light);">A streamlined, transparent approach to managing your financial success.</p>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-icon">01</div>
+                <h3>Understand</h3>
+                <p style="color:var(--text-light); font-size:0.95rem;">We analyze your business goals and current financial state.</p>
+            </div>
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-icon">02</div>
+                <h3>Analyze</h3>
+                <p style="color:var(--text-light); font-size:0.95rem;">Deep dive into your numbers to identify optimization opportunities.</p>
+            </div>
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-icon">03</div>
+                <h3>Strategize</h3>
+                <p style="color:var(--text-light); font-size:0.95rem;">Develop a tailored plan for tax, growth, and regulatory compliance.</p>
+            </div>
+            <div class="timeline-step" data-aos="fade-up" data-aos-delay="400">
+                <div class="timeline-icon">04</div>
+                <h3>Grow</h3>
+                <p style="color:var(--text-light); font-size:0.95rem;">Execute the strategy and monitor ongoing financial performance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Testimonials -->
+<section class="section section-white">
+    <div class="container">
+        <div style="text-align:center; margin-bottom: 2rem;" data-aos="fade-up">
+            <h2>Client Success Stories</h2>
+            <p style="max-width:600px; margin:0 auto; color:var(--text-light);">See what our partners say about our financial consulting.</p>
+        </div>
+        
+        <div class="grid-3">
+            <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/stackly_img_25.webp" alt="Client" loading="lazy">
+                    <div>
+                        <h4 style="margin:0; font-size:1rem;">Elena Rodriguez</h4>
+                        <p style="margin:0; font-size:0.85rem; color:var(--text-light);">CEO, TechFlow Solutions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/stackly_img_26.webp" alt="Client" loading="lazy">
+                    <div>
+                        <h4 style="margin:0; font-size:1rem;">David Chen</h4>
+                        <p style="margin:0; font-size:0.85rem; color:var(--text-light);">Founder, Chen Retail Group</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                <div>
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p style="font-style: italic;">"Their audit and compliance team made our latest review entirely stress-free. Professional, secure, and incredibly experienced."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/stackly_img_27.webp" alt="Client" loading="lazy">
+                    <div>
+                        <h4 style="margin:0; font-size:1rem;">Sarah Jenkins</h4>
+                        <p style="margin:0; font-size:0.85rem; color:var(--text-light);">Director, Helix BioTech</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 8: Blog Preview -->
+<section class="section section-light">
+    <div class="container">
+        <div style="text-align:center; margin-bottom: 2rem;" data-aos="fade-up">
+            <h2>Financial Insights</h2>
+            <p style="max-width:600px; margin:0 auto; color:var(--text-light);">Latest strategies and accounting updates from our experts.</p>
+        </div>
+        
+        <div class="grid-3">
+            <div class="card" style="padding:0; border:none;" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/stackly_unique_1.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;" loading="lazy" alt="Financial illustration">
+                <div style="padding:2rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; font-size:0.85rem;">
+                        <span class="badge badge-success">Tax Planning</span>
+                        <span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Oct 12, 2026</span>
+                    </div>
+                    <h3 style="font-size:1.25rem;">Tax Planning Strategies for Growing Businesses</h3>
+                    <a href="404.html" class="card-link" style="margin-top:1rem;">Read More </a>
+                </div>
+            </div>
+            
+            <div class="card" style="padding:0; border:none;" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/stackly_unique_2.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;" loading="lazy" alt="Financial illustration">
+                <div style="padding:2rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; font-size:0.85rem;">
+                        <span class="badge badge-warning">Accounting</span>
+                        <span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Oct 05, 2026</span>
+                    </div>
+                    <h3 style="font-size:1.25rem;">How Accurate Bookkeeping Improves Business Decisions</h3>
+                    <a href="404.html" class="card-link" style="margin-top:1rem;">Read More </a>
+                </div>
+            </div>
+            
+            <div class="card" style="padding:0; border:none;" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/stackly_unique_3.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;" loading="lazy" alt="Financial illustration">
+                <div style="padding:2rem;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; font-size:0.85rem;">
+                        <span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent);">Finance</span>
+                        <span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Sep 28, 2026</span>
+                    </div>
+                    <h3 style="font-size:1.25rem;">Financial Planning Mistakes Businesses Should Avoid</h3>
+                    <a href="404.html" class="card-link" style="margin-top:1rem;">Read More </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 9: CTA -->
+<section class="section">
+    <div class="container">
+        <div class="bg-animated" style="text-align:center; padding: 6rem 3rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);" data-aos="zoom-in">
+            <h2 style="color:white;">Ready to Take Control of Your Finances?</h2>
+            <p style="margin-bottom:3rem; font-size:1.2rem; max-width:600px; margin-left:auto; margin-right:auto; color:rgba(255,255,255,0.9);">Join the leading businesses that trust Stackly for their accounting and advisory needs.</p>
+            <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;">
+                <a href="contact.html" class="btn btn-white" style="color:var(--primary); font-weight:700;">Book a Consultation</a>
+                <a href="contact.html" class="btn btn-outline" style="color:white; border-color:rgba(255,255,255,0.5);">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer" style="background-color: #0A192F; color: white; padding-top: 2rem;">
+    <div class="container grid-4">
+        <!-- Col 1: Logo & Info -->
+        <div>
+            <a href="index.html" class="logo" style="color:white; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem; font-size:1.5rem; font-weight:700; text-decoration:none;">
+                <i class="fa-solid fa-chart-pie" style="color:var(--accent);"></i> Stackly
+            </a>
+            <p style="color:#8892B0; margin-bottom:2rem; font-size:0.95rem; line-height:1.6;">Empowering businesses with precise accounting, forward-thinking tax strategies, and unparalleled financial advice that fuels sustainable growth.</p>
+            <div class="social-links" style="display:flex; gap:1rem;">
+                <a href="404.html" aria-label="Visit our social media" style="width:36px; height:36px; background:rgba(255,255,255,0.05); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; transition:0.2s;" onmouseover="this.style.background='var(--primary)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404.html" aria-label="Visit our social media" style="width:36px; height:36px; background:rgba(255,255,255,0.05); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; transition:0.2s;" onmouseover="this.style.background='var(--primary)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'"><i class="fa-brands fa-twitter"></i></a>
+                <a href="404.html" style="width:36px; height:36px; background:rgba(255,255,255,0.05); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; transition:0.2s;" onmouseover="this.style.background='var(--primary)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+        
+        <!-- Col 2: Quick Links -->
+        <div>
+            <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Quick Links</h4>
+            <ul style="list-style:none; padding:0; margin:0;">
+                <li style="margin-bottom:0.75rem;"><a href="about.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">About Us</a></li>
+                <li style="margin-bottom:0.75rem;"><a href="services.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Our Services</a></li>
+                <li style="margin-bottom:0.75rem;"><a href="blog.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Financial Blog</a></li>
+                <li style="margin-bottom:0.75rem;"><a href="contact.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Contact Us</a></li>
+                <li style="margin-bottom:0.75rem;"><a href="login.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Client Portal</a></li>
+            </ul>
+        </div>
+        
+        <!-- Col 3: Services & Resources -->
+        <div>
+            <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Services</h4>
+            <ul style="list-style:none; padding:0; margin:0; margin-bottom:1.5rem;">
+                <li style="margin-bottom:0.75rem;"><a href="404.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Accounting & Bookkeeping</a></li>
+                <li style="margin-bottom:0.75rem;"><a href="404.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Tax Planning</a></li>
+                <li style="margin-bottom:0.75rem;"><a href="404.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Audit & Assurance</a></li>
+            </ul>
+            <h4 style="color:white; margin-bottom:1rem; font-size:1.1rem; letter-spacing:0.05em;">Resources</h4>
+            <ul style="list-style:none; padding:0; margin:0;">
+                <li style="margin-bottom:0.75rem;"><a href="404.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Tax Calculators</a></li>
+                <li style="margin-bottom:0.75rem;"><a href="404.html" style="color:#8892B0; text-decoration:none; transition:0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#8892B0'">Financial Glossary</a></li>
+            </ul>
+        </div>
+        
+        <!-- Col 4: Contact & Newsletter -->
+        <div>
+            <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Contact Info</h4>
+            <ul style="list-style:none; padding:0; margin:0; margin-bottom:1.5rem;">
+                <li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-location-dot" style="margin-top:5px; color:var(--accent);"></i>  MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</li>
+                <li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:center;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i>  9090909090</li>
+                <li style="display:flex; gap:10px; color:#8892B0; align-items:center;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com</li>
+            </ul>
+            <h4 style="color:white; margin-bottom:1rem; font-size:1rem;">Subscribe to Newsletter</h4>
+            <form style="display:flex;" onsubmit="event.preventDefault(); alert('Subscribed to newsletter!');">
+                <input type="email" required aria-label="Email Address for Newsletter" placeholder="Email Address" style="padding:0.75rem; border:none; outline:none; border-radius:4px 0 0 4px; flex:1; font-family:inherit;">
+                <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter" style="border-radius:0 4px 4px 0; padding:0.75rem 1rem; flex-shrink:0;"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem; padding: 1.5rem 0;">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+            <p style="color:#8892B0; margin:0; font-size:0.9rem;">&copy; 2026 Stackly. All rights reserved.</p>
+            <div style="display:flex; gap:1.5rem;">
+                <a href="404.html" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#8892B0'">Privacy Policy</a>
+                <a href="404.html" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#8892B0'">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
