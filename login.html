@@ -13,42 +13,42 @@
 <body class="auth-page">
 <div class="auth-card" data-aos="zoom-in">
 <div class="auth-header">
-<a class="logo" href="index.html" style="justify-content:center;"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
-<h2 style="margin-top:1.5rem; margin-bottom:0.5rem; font-size:1.75rem;">Welcome Back</h2>
+<a class="logo" href="index.html" style="justify-content:center;"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
+<h2 style="margin-top:0.5rem; margin-bottom:0.25rem; font-size:1.5rem;">Welcome Back</h2>
 <p style="color:var(--text-light); margin:0;">Sign in to securely manage your finances</p>
 </div>
-<form id="proLoginForm" novalidate="novalidate">
+<form data-success-action="login_success" id="proLoginForm" novalidate="novalidate">
 <div class="form-group">
 <label class="form-label" for="loginEmail">Email Address</label>
-<input class="form-control" id="loginEmail" placeholder="name@company.com" type="email"/><span class="error-message" id="loginEmailError"></span>
+<input class="form-control" id="loginEmail" data-custom-required="true" placeholder="name@company.com" type="email"/>
 </div>
 <div class="form-group">
 <label class="form-label" for="loginPassword">Password</label>
 <div style="position:relative;">
-<input class="form-control" fa-circle"="" fa-solid="" id="loginPassword" placeholder="&lt;i class=" style="font-size:0.4em; vertical-align:middle; margin:0 6px;" type="password"/><i class="fa-solid fa-circle" style="font-size:0.4em; vertical-align:middle; margin:0 6px;"></i><i class="fa-solid fa-circle" style="font-size:0.4em; vertical-align:middle; margin:0 6px;"></i><i class="fa-solid fa-circle" style="font-size:0.4em; vertical-align:middle; margin:0 6px;"></i><i class="fa-solid fa-circle" style="font-size:0.4em; vertical-align:middle; margin:0 6px;"></i><i class="fa-solid fa-circle" style="font-size:0.4em; vertical-align:middle; margin:0 6px;"></i><i class="fa-solid fa-circle" style="font-size:0.4em; vertical-align:middle; margin:0 6px;"></i><i class="fa-solid fa-circle" style="font-size:0.4em; vertical-align:middle; margin:0 6px;"></i>" style="padding-right:2.5rem;"&gt;
-                    <i class="fa-solid fa-eye" id="togglePassword" style="position:absolute; right:1rem; top:50%; transform:translateY(-50%); cursor:pointer; color:var(--text-light); padding:0.25rem;"></i>
-</div><span class="error-message" id="loginPasswordError"></span>
+<input class="form-control" id="loginPassword" type="password" placeholder="Enter password" data-custom-required="true" />
+<i class="fa-solid fa-eye" id="togglePassword" style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer; color:var(--text-light);"></i>
+</div>
 </div>
 <div class="form-group">
 <label class="form-label" for="loginRole">Select Role</label>
-<select class="form-control" id="loginRole">
+<select class="form-control" id="loginRole" data-custom-required="true">
 <option value="client">Client Portal</option>
 <option value="admin">Admin Dashboard</option>
-</select><span class="error-message" id="loginRoleError"></span>
+</select>
 </div>
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; font-size:0.95rem;">
+<div style="display:flex; flex-direction:column; gap:0.25rem; align-items:flex-start; margin-bottom:1rem; font-size:0.85rem; width:100%;">
 <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; color:var(--text-main);">
-<input id="dynamicField_login_1" style="width:16px; height:16px; accent-color:var(--accent);" type="checkbox"/><span class="error-message" id="dynamicField_login_1Error"></span> Remember me
+<input id="dynamicField_login_1" style="width:16px; height:16px; accent-color:var(--accent);" type="checkbox"/> Remember me
                 </label>
-<a href="404.html" style="font-weight:600; color:var(--accent);">Forgot Password?</a>
+<a href="404.html" onclick="window.location.href='404.html'; return false;" style="font-weight:600; color:var(--accent);">Forgot Password?</a>
 </div>
-<button class="btn btn-primary btn-block" id="loginSubmitBtn" style="padding:1rem; font-size:1.1rem; justify-content:center;" type="submit">Sign In</button>
+<button class="btn btn-primary btn-block" id="loginSubmitBtn" style="justify-content:center; padding:0.6rem 1rem;" type="submit">Sign In</button>
 </form>
-<p style="text-align:center; margin-top:2.5rem; font-size:0.95rem; color:var(--text-light);">
+<p style="text-align:center; margin-top:1rem; font-size:0.95rem; color:var(--text-light);">
             Don't have an account? <a href="signup.html" style="font-weight:700; color:var(--primary);">Sign Up</a>
 </p>
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/main.js"></script>
-</body>
+<script>document.getElementById('togglePassword').addEventListener('click', function() { const pw = document.getElementById('loginPassword'); const type = pw.getAttribute('type') === 'password' ? 'text' : 'password'; pw.setAttribute('type', type); this.classList.toggle('fa-eye-slash'); });</script></body>
 </html>

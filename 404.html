@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 - Page Not Found</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+  body {
+    background-color: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .error-container {
+    background: white;
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 600px;
+    width: 90%;
+  }
+  .error-code {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 0;
+    line-height: 1;
+  }
+  .error-msg {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin: 1rem 0;
+    font-weight: 600;
+  }
+  .error-desc {
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<div class="error-container">
+<i class="fa-solid fa-triangle-exclamation" style="font-size: 4rem; color: #F59E0B; margin-bottom: 1.5rem;"></i>
+<h1 class="error-code">404</h1>
+<h2 class="error-msg">Oops! Page Not Found</h2>
+<p class="error-desc">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;"><button class="btn btn-outline" onclick="history.back()" style="padding: 1rem 2rem; font-size: 1.1rem; cursor:pointer; color:var(--primary) !important;"><i class="fa-solid fa-arrow-left" style="margin-right: 0.5rem;"></i> Go Back</button><a class="btn btn-primary" href="index.html" style="padding: 1rem 2rem; font-size: 1.1rem; color: white !important;"><i class="fa-solid fa-house" style="margin-right: 0.5rem;"></i> Back to Home</a></div></div>
+</body>
+</html>

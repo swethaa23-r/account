@@ -15,7 +15,7 @@
 <div class="dash-layout-mega">
 <div class="dash-mobile-overlay-mega" id="dashOverlay" onclick="document.getElementById('sidebar').classList.remove('open'); this.style.display='none';"></div>
 <aside class="dash-sidebar-mega" id="sidebar">
-<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
+<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="dash-nav-mega">
 <a class="dash-nav-item-mega active" href="#" onclick="switchTab(event, 'overview')"><i class="fa-solid fa-border-all"></i> Dashboard</a>
 <a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'financial')"><i class="fa-solid fa-chart-line"></i> Financials</a>
@@ -31,10 +31,11 @@
 <div class="dash-main-mega">
 <header class="dash-header-mega">
 <div style="display:flex; align-items:center; gap:20px;">
-<button class="mobile-toggle" onclick="document.getElementById('sidebar').classList.add('open'); document.getElementById('dashOverlay').style.display='block';" style="background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--text-dark);"><i class="fa-solid fa-bars"></i></button>
+<button class="dashboard-mobile-toggle" style="background:none; border:none; font-size:1.5rem; color:var(--text-main); cursor:pointer;" onclick="document.getElementById('sidebar').classList.add('open'); document.getElementById('dashOverlay').style.display='block';"><i class="fa-solid fa-bars"></i></button>
+<a href="index.html" class="dash-mobile-logo" style="display:none;"><img alt="Logo" src="logo-blue.webp" style="height: 30px; width: auto;"/></a>
 <form class="dash-header-search-mega" data-success-action="404" novalidate="novalidate">
 <i class="fa-solid fa-magnifying-glass" style="color:var(--text-light);"></i>
-<input data-custom-required="true" id="dynamicField_client-dashboard_1" placeholder="Search resources, clients, reports..." type="text"/><span class="error-message" id="dynamicField_client-dashboard_1Error"></span>
+<input data-custom-required="true" id="dynamicField_client-dashboard_1" placeholder="Search resources, clients, reports..." type="text" data-custom-required="true"/>
 </form>
 </div>
 <div style="display:flex; align-items:center; gap:20px;">
@@ -87,7 +88,7 @@
 <div class="dash-section-mega" id="invoices">
 <h2 style="margin-bottom:1.5rem;">My Invoices</h2>
 <form class="dash-card-mega" data-success-action="404" novalidate="novalidate" style="display:flex; gap:15px; align-items:center;">
-<input id="dynamicField_client-dashboard_2" placeholder="Search Invoices..." style="padding:8px 12px; border:1px solid #ccc; border-radius:4px; flex:1;" type="text"/><span class="error-message" id="dynamicField_client-dashboard_2Error"></span>
+<input id="dynamicField_client-dashboard_2" placeholder="Search Invoices..." style="padding:8px 12px; border:1px solid #ccc; border-radius:4px; flex:1;" type="text" data-custom-required="true"/>
 <button class="action-btn action-view" style="padding:8px 20px;" type="submit">Filter</button>
 </form>
 <div class="dash-card-mega table-wrap-mega">
@@ -101,8 +102,8 @@
 <div class="dash-section-mega" id="transactions">
 <h2 style="margin-bottom:1.5rem;">Transaction History</h2>
 <form class="dash-card-mega" data-success-action="404" novalidate="novalidate" style="display:flex; gap:15px; align-items:center;">
-<input id="dynamicField_client-dashboard_3" placeholder="Search Transactions..." style="padding:8px 12px; border:1px solid #ccc; border-radius:4px; flex:1;" type="text"/><span class="error-message" id="dynamicField_client-dashboard_3Error"></span>
-<select id="dynamicField_client-dashboard_4" style="padding:8px 12px; border:1px solid #ccc; border-radius:4px;"><option>All Categories</option></select><span class="error-message" id="dynamicField_client-dashboard_4Error"></span>
+<input id="dynamicField_client-dashboard_3" placeholder="Search Transactions..." style="padding:8px 12px; border:1px solid #ccc; border-radius:4px; flex:1;" type="text" data-custom-required="true"/>
+<select id="dynamicField_client-dashboard_4" style="padding:8px 12px; border:1px solid #ccc; border-radius:4px;" data-custom-required="true"><option>All Categories</option></select>
 <button class="action-btn action-view" style="padding:8px 20px;" type="submit">Search</button>
 </form>
 <div class="dash-card-mega table-wrap-mega">
@@ -118,10 +119,36 @@
 <div class="dash-card-mega">
 <h3>Generate Custom Report</h3>
 <form data-success-action="404" novalidate="novalidate" style="display:flex; gap:15px; margin-top:10px;">
-<input data-custom-required="true" id="dynamicField_client-dashboard_5" style="padding:8px 12px; border:1px solid #ccc; border-radius:4px;" type="date"/><span class="error-message" id="dynamicField_client-dashboard_5Error"></span>
+<input data-custom-required="true" id="dynamicField_client-dashboard_5" style="padding:8px 12px; border:1px solid #ccc; border-radius:4px;" type="date" data-custom-required="true"/>
 <button class="action-btn action-edit" style="padding:8px 20px;" type="submit">Generate</button>
 </form>
 </div>
+  <div class="dash-card-mega table-wrap-mega" style="margin-top: 2rem;">
+      <h3>Recent Reports</h3>
+      <div class="dash-table-wrapper-mega">
+          <table>
+              <tr><th>Report Type</th><th>Date</th><th>Status</th><th>Download</th></tr>
+              <tr><td>Tax Summary 2026</td><td>Nov 10, 2026</td><td><span class="badge badge-success">Ready</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button"><i class="fa-solid fa-download"></i></button></td></tr>
+              <tr><td>P&L Statement Q2</td><td>Jul 15, 2026</td><td><span class="badge badge-success">Ready</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button"><i class="fa-solid fa-download"></i></button></td></tr>
+          </table>
+      </div>
+  </div>
+  <div class="dash-grid-2-mega" style="margin-top: 2rem;">
+      <div class="dash-card-mega">
+          <h3>Tax Documents</h3>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;">
+              <li style="padding:10px; border-left:3px solid var(--primary); background:#f8fafc;">1099-MISC Forms</li>
+              <li style="padding:10px; border-left:3px solid var(--primary); background:#f8fafc;">W-2 Copies</li>
+          </ul>
+      </div>
+      <div class="dash-card-mega">
+          <h3>Financial Insights</h3>
+          <div style="padding:15px; background:rgba(0,102,255,0.05); border-radius:8px; border:1px solid rgba(0,102,255,0.1);">
+              <p style="margin:0; font-size:0.95rem; color:var(--text-main);"><strong>Tip:</strong> Your operating expenses are down 12% compared to last quarter. Great job optimizing costs!</p>
+          </div>
+      </div>
+  </div>
+
 </div>
 <div class="dash-section-mega" id="documents">
 <h2 style="margin-bottom:1.5rem;">Document Center</h2>
@@ -143,10 +170,46 @@
 <div class="dash-card-mega">
 <h3>Chat with Advisor</h3>
 <form data-success-action="404" novalidate="novalidate" style="display:flex; gap:10px; margin-top:20px;">
-<input data-custom-required="true" id="dynamicField_client-dashboard_6" placeholder="Type a message..." style="flex:1; padding:10px; border:1px solid #ccc; border-radius:4px;" type="text"/><span class="error-message" id="dynamicField_client-dashboard_6Error"></span>
+<input data-custom-required="true" id="dynamicField_client-dashboard_6" placeholder="Type a message..." style="flex:1; padding:10px; border:1px solid #ccc; border-radius:4px;" type="text" data-custom-required="true"/>
 <button class="action-btn action-view" style="padding:0 20px;" type="submit">Send</button>
 </form>
 </div>
+  <div class="dash-card-mega" style="margin-top: 2rem;">
+      <h3>Recent Conversations</h3>
+      <div style="display:flex; flex-direction:column; gap:15px; margin-top:10px;">
+          <div style="padding:15px; background:#f8fafc; border-radius:8px; display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                  <h4 style="margin:0 0 5px 0; font-size:1rem;">Support Team</h4>
+                  <p style="margin:0; color:var(--text-light); font-size:0.9rem;">Your requested tax documents have been uploaded.</p>
+              </div>
+              <span style="font-size:0.8rem; color:var(--text-light);">2 hrs ago</span>
+          </div>
+          <div style="padding:15px; background:#f8fafc; border-radius:8px; display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                  <h4 style="margin:0 0 5px 0; font-size:1rem;">Account Manager</h4>
+                  <p style="margin:0; color:var(--text-light); font-size:0.9rem;">Please review the draft Q3 report when you have a moment.</p>
+              </div>
+              <span style="font-size:0.8rem; color:var(--text-light);">Yesterday</span>
+          </div>
+      </div>
+  </div>
+  <div class="dash-grid-2-mega" style="margin-top: 2rem;">
+      <div class="dash-card-mega">
+          <h3>Important Announcements</h3>
+          <div style="padding:15px; border-left:4px solid var(--accent); background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+              <h4 style="margin:0 0 5px 0;">Year-End Processing</h4>
+              <p style="margin:0; font-size:0.85rem; color:var(--text-light);">Please submit all pending invoices by Dec 15th for processing.</p>
+          </div>
+      </div>
+      <div class="dash-card-mega">
+          <h3>Shared Files</h3>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;">
+              <li style="padding:10px; background:#f8fafc; border-radius:6px; display:flex; align-items:center; gap:10px;"><i class="fa-solid fa-file-pdf" style="color:#ef4444;"></i> Q3_Draft.pdf</li>
+              <li style="padding:10px; background:#f8fafc; border-radius:6px; display:flex; align-items:center; gap:10px;"><i class="fa-solid fa-file-excel" style="color:#10b981;"></i> Expense_Sheet.xlsx</li>
+          </ul>
+      </div>
+  </div>
+
 </div>
 <div class="dash-section-mega" id="settings">
 <h2 style="margin-bottom:1.5rem;">Account Settings</h2>
@@ -154,16 +217,16 @@
 <form class="dash-card-mega" data-success-action="profile_success" novalidate="novalidate">
 <h3>Profile Preferences</h3>
 <div style="display:flex; flex-direction:column; gap:10px;">
-<label>Full Name</label><input data-custom-required="true" id="dynamicField_client-dashboard_7" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="text" value="Elena Rodriguez"/><span class="error-message" id="dynamicField_client-dashboard_7Error"></span>
-<label>Contact Email</label><input data-custom-required="true" id="dynamicField_client-dashboard_8" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="email" value="elena@techflow.com"/><span class="error-message" id="dynamicField_client-dashboard_8Error"></span>
+<label>Full Name</label><input data-custom-required="true" id="dynamicField_client-dashboard_7" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="text" value="Elena Rodriguez"/>
+<label>Contact Email</label><input data-custom-required="true" id="dynamicField_client-dashboard_8" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="email" value="elena@techflow.com"/>
 <button class="action-btn action-view" style="width:120px;" type="submit">Save Changes</button>
 </div>
 </form>
 <form class="dash-card-mega" data-success-action="password_success" novalidate="novalidate">
 <h3>Security &amp; Password</h3>
 <div style="display:flex; flex-direction:column; gap:10px;">
-<label>Current Password</label><input data-custom-required="true" id="dynamicField_client-dashboard_9" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="password"/><span class="error-message" id="dynamicField_client-dashboard_9Error"></span>
-<label>New Password</label><input data-custom-required="true" id="dynamicField_client-dashboard_10" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="password"/><span class="error-message" id="dynamicField_client-dashboard_10Error"></span>
+<label>Current Password</label><input data-custom-required="true" id="dynamicField_client-dashboard_9" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="password"/>
+<label>New Password</label><input data-custom-required="true" id="dynamicField_client-dashboard_10" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="password"/>
 <button class="action-btn action-edit" style="width:150px;" type="submit">Update Password</button>
 </div>
 </form>
@@ -235,5 +298,6 @@
 
     </script>
 <script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
 </body>
 </html>

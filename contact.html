@@ -20,18 +20,23 @@
 <!-- Header / Navbar -->
 <header class="navbar">
 <div class="container nav-container">
-<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
+<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
+<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+    <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
+</div>
+
 <a class="" href="index.html">Home</a>
 <a class="" href="about.html">About</a>
 <a class="" href="services.html">Services</a>
 <a class="" href="blog.html">Blog</a>
 <a class="active" href="contact.html">Contact</a>
-</nav>
-<div class="nav-actions">
-<a class="btn btn-outline" href="login.html">Login</a>
-<a class="btn btn-primary" href="signup.html">Get Started</a>
+
+<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+    <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
+</nav>
+<div class="nav-actions"><a class="btn btn-primary" href="login.html">Login</a></div>
 <div class="mobile-toggle">
 <i class="fa-solid fa-bars"></i>
 </div>
@@ -54,20 +59,18 @@
 <p style="margin-bottom:3rem; color:var(--text-light); font-size:1.1rem; line-height:1.7;">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start;">
 <div style="width:55px; height:55px; background:rgba(0,102,255,0.08); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:1.35rem; flex-shrink:0;">
-<i class="fa-solid fa-location-dot"></i>
-                MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</div>
+<i class="fa-solid fa-location-dot"></i></div>
 <div>
 <h4 style="margin:0 0 0.5rem 0; font-size:1.15rem; color:var(--primary);">Location</h4>
-<p style="margin:0; color:var(--text-light); font-size:1.05rem; line-height:1.5;">123 Financial District, Suite 500<br/>New York, NY 10004</p>
+<p style="margin:0; color:var(--text-light); font-size:1.05rem; line-height:1.5;">MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</p>
 </div>
 </div>
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start;">
 <div style="width:55px; height:55px; background:rgba(0,102,255,0.08); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:1.35rem; flex-shrink:0;">
-<i class="fa-solid fa-phone"></i>
-                9090909090</div>
+<i class="fa-solid fa-phone"></i></div>
 <div>
 <h4 style="margin:0 0 0.5rem 0; font-size:1.15rem; color:var(--primary);">Phone</h4>
-<p style="margin:0; color:var(--text-light); font-size:1.05rem; line-height:1.5;">+1 (555) 123-4567<br/>+1 (555) 987-6543 (Support)</p>
+<p style="margin:0; color:var(--text-light); font-size:1.05rem; line-height:1.5;">9090909090<br/>8080808080</p>
 </div>
 </div>
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start;">
@@ -76,7 +79,7 @@
 </div>
 <div>
 <h4 style="margin:0 0 0.5rem 0; font-size:1.15rem; color:var(--primary);">Email</h4>
-<p style="margin:0; color:var(--text-light); font-size:1.05rem; line-height:1.5;">contact@stackly.com<br/>advisory@stackly.com</p>
+<p style="margin:0; color:var(--text-light); font-size:1.05rem; line-height:1.5;">contact@stackly.com<br/>info@stackly.com</p>
 </div>
 </div>
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start;">
@@ -103,25 +106,25 @@
 </div>
 </div>
 <!-- Form -->
-<form id="proContactForm" novalidate="novalidate">
+<form data-success-action="contact_success" id="proContactForm" novalidate="novalidate">
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
 <div class="form-group" style="margin:0;">
 <label class="form-label" for="cName">Full Name <span style="color:var(--error);">*</span></label>
-<input class="form-control" id="cName" placeholder="John Doe" type="text"/><span class="error-message" id="cNameError"></span>
+<input class="form-control" data-custom-required="true" id="cName" placeholder="John Doe" type="text"/>
 </div>
 <div class="form-group" style="margin:0;">
 <label class="form-label" for="cCompany">Company</label>
-<input class="form-control" id="cCompany" placeholder="Acme Corp" type="text"/><span class="error-message" id="cCompanyError"></span>
+<input class="form-control" id="cCompany" placeholder="Acme Corp" type="text"/>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:1.5rem;">
 <div class="form-group" style="margin:0;">
 <label class="form-label" for="cEmail">Email Address <span style="color:var(--error);">*</span></label>
-<input class="form-control" id="cEmail" placeholder="john@example.com" type="text"/><span class="error-message" id="cEmailError"></span>
+<input class="form-control" data-custom-required="true" id="cEmail" placeholder="john@example.com" type="text"/>
 </div>
 <div class="form-group" style="margin:0;">
 <label class="form-label" for="cPhone">Phone Number <span style="color:var(--error);">*</span></label>
-<input class="form-control" id="cPhone" placeholder="+1 (555) 000-0000" type="text"/><span class="error-message" id="cPhoneError"></span>
+<input class="form-control" data-custom-required="true" id="cPhone" placeholder="+1 (555) 000-0000" type="text"/>
 </div>
 </div>
 <div class="form-group" style="margin-top:1.5rem;">
@@ -136,11 +139,11 @@
 <option value="Financial Planning">Financial Planning</option>
 <option value="Compliance">Compliance</option>
 <option value="CFO Advisory">CFO Advisory</option>
-</select><span class="error-message" id="cServiceError"></span>
+</select>
 </div>
 <div class="form-group">
 <label class="form-label" for="cMessage">Message <span style="color:var(--error);">*</span></label>
-<textarea class="form-control" id="cMessage" placeholder="How can we help you achieve your financial goals?" rows="5"></textarea><span class="error-message" id="cMessageError"></span>
+<textarea class="form-control" data-custom-required="true" id="cMessage" placeholder="How can we help you achieve your financial goals?" rows="5"></textarea>
 </div>
 <button class="btn btn-primary btn-block" id="cSubmit" style="padding:1rem; font-size:1.1rem; justify-content:center;" type="submit">Submit Inquiry</button>
 </form>
@@ -151,31 +154,18 @@
 <section class="section section-light" style="padding-top:0;">
 <div class="container" data-aos="fade-up">
 <div style="width:100%; height:450px; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg); position:relative; border:1px solid var(--border);">
-<!-- High quality static map image with a marker to simulate a premium map securely -->
-<img alt="Map Location" loading="lazy" src="images/stackly_img_22.webp" style="width:100%; height:100%; object-fit:cover; filter:grayscale(0.6) opacity(0.8);"/>
-<div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); display:flex; flex-direction:column; align-items:center;">
-<!-- Animated Pin -->
-<div style="width:60px; height:60px; background:var(--accent); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.75rem; box-shadow:0 10px 25px rgba(0, 102, 255, 0.4); position:relative; z-index:2; border:4px solid white;">
-<i class="fa-solid fa-location-dot"></i>
-                    MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003<div style="position:absolute; bottom:-12px; width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent; border-top:12px solid white; z-index:-1;"></div>
-<div style="position:absolute; bottom:-9px; width:0; height:0; border-left:7px solid transparent; border-right:7px solid transparent; border-top:9px solid var(--accent); z-index:1;"></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125055.22822453629!2d78.07722744883908!3d11.653733075677897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babce5e3ef22239%3A0x6338fb2430032b4b!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<!-- Tooltip Box -->
-<div style="background:white; padding:1.25rem; border-radius:var(--radius); box-shadow:var(--shadow-lg); margin-top:1.5rem; text-align:center; min-width:220px; z-index:2;">
-<h4 style="margin:0 0 0.25rem 0; font-size:1.1rem; color:var(--primary);">Stackly HQ</h4>
-<p style="margin:0; font-size:0.9rem; color:var(--text-light);">123 Financial District, NY</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+  </div>
+  </div>
+  </section>
 </main>
 <!-- Footer -->
 <footer class="footer" style="background-color: #0A192F; color: white; padding-top: 2rem;">
 <div class="container grid-4">
 <!-- Col 1: Logo & Info -->
 <div>
-<a class="logo" href="index.html" style="color:white; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem; font-size:1.5rem; font-weight:700; text-decoration:none;"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
+<a class="logo" href="index.html" style="color:white; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem; font-size:1.5rem; font-weight:700; text-decoration:none;"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <p style="color:#8892B0; margin-bottom:2rem; font-size:0.95rem; line-height:1.6;">Empowering businesses with precise accounting, forward-thinking tax strategies, and unparalleled financial advice that fuels sustainable growth.</p>
 <div class="social-links" style="display:flex; gap:1rem;">
 <a aria-label="Visit our social media" href="404.html" onmouseout="this.style.background='rgba(255,255,255,0.05)'" onmouseover="this.style.background='var(--primary)'" style="width:36px; height:36px; background:rgba(255,255,255,0.05); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; transition:0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -186,13 +176,7 @@
 <!-- Col 2: Quick Links -->
 <div>
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Quick Links</h4>
-<ul style="list-style:none; padding:0; margin:0;">
-<li style="margin-bottom:0.75rem;"><a href="about.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">About Us</a></li>
-<li style="margin-bottom:0.75rem;"><a href="services.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Our Services</a></li>
-<li style="margin-bottom:0.75rem;"><a href="blog.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Financial Blog</a></li>
-<li style="margin-bottom:0.75rem;"><a href="contact.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Contact Us</a></li>
-<li style="margin-bottom:0.75rem;"><a href="login.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Client Portal</a></li>
-</ul>
+<ul style="list-style:none; padding:0; margin:0;"><li style="margin-bottom:0.75rem;"><a href="index.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Home</a></li><li style="margin-bottom:0.75rem;"><a href="about.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">About</a></li><li style="margin-bottom:0.75rem;"><a href="services.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Service</a></li><li style="margin-bottom:0.75rem;"><a href="blog.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Blog</a></li><li style="margin-bottom:0.75rem;"><a href="contact.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Contact</a></li></ul>
 </div>
 <!-- Col 3: Services & Resources -->
 <div>
@@ -213,12 +197,12 @@
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Contact Info</h4>
 <ul style="list-style:none; padding:0; margin:0; margin-bottom:1.5rem;">
 <li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-location-dot" style="margin-top:5px; color:var(--accent);"></i>  MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</li>
-<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:center;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i>  9090909090</li>
-<li style="display:flex; gap:10px; color:#8892B0; align-items:center;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com</li>
+<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i> 9090909090, 8080808080</li>
+<li style="display:flex; gap:10px; color:#8892B0; align-items:flex-start;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com, info@stackly.com</li>
 </ul>
 <h4 style="color:white; margin-bottom:1rem; font-size:1rem;">Subscribe to Newsletter</h4>
 <form novalidate="novalidate" style="display:flex;">
-<input aria-label="Email Address for Newsletter" data-custom-required="true" id="dynamicField_contact_1" placeholder="Email Address" style="padding:0.75rem; border:none; outline:none; border-radius:4px 0 0 4px; flex:1; font-family:inherit;" type="email"/><span class="error-message" id="dynamicField_contact_1Error"></span>
+<input aria-label="Email Address for Newsletter" data-custom-required="true" id="dynamicField_contact_1" placeholder="Email Address" style="padding:0.75rem; border:none; outline:none; border-radius:4px 0 0 4px; flex:1; font-family:inherit;" type="email"/>
 <button aria-label="Subscribe to newsletter" class="btn btn-primary" style="border-radius:0 4px 4px 0; padding:0.75rem 1rem; flex-shrink:0;" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
 </form>
 </div>
@@ -228,8 +212,8 @@
 <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
 <p style="color:#8892B0; margin:0; font-size:0.9rem;">© 2026 Stackly. All rights reserved.</p>
 <div style="display:flex; gap:1.5rem;">
-<a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Privacy Policy</a>
-<a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Terms &amp; Conditions</a>
+<a href="404.html" onclick="window.location.href='404.html'; return false;" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Privacy Policy</a>
+<a href="404.html" onclick="window.location.href='404.html'; return false;" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Terms &amp; Conditions</a>
 </div>
 </div>
 </div>

@@ -83,28 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Back-to-Top Button
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.id = 'backToTop';
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
-    backToTopBtn.setAttribute('aria-label', 'Back to top');
-    
-    if (!document.querySelector('.dashboard-layout-mega')) {
-        document.body.appendChild(backToTopBtn);
-    }
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
-        }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 
     // 5. Active Navigation State Detection
     const currentPath = window.location.pathname.split('/').pop();
@@ -129,22 +108,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 6. INLINE JAVASCRIPT VALIDATION (NO POPUPS)
+    
     function showError(inputElement, message) {
-        const errorSpan = document.getElementById(inputElement.id + 'Error');
-        if (errorSpan) {
-            errorSpan.textContent = message;
+        clearError(inputElement);
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.style.color = '#ef4444';
+        errorDiv.style.fontSize = '0.85rem';
+        errorDiv.style.marginTop = '0.35rem';
+        errorDiv.textContent = message;
+        
+        let targetWrapper = inputElement;
+        if (inputElement.parentElement && inputElement.parentElement.style.position === 'relative') {
+            targetWrapper = inputElement.parentElement;
         }
+        
+        targetWrapper.parentNode.insertBefore(errorDiv, targetWrapper.nextSibling);
+        inputElement.style.borderColor = '#ef4444';
     }
 
     function clearError(inputElement) {
-        const errorSpan = document.getElementById(inputElement.id + 'Error');
-        if (errorSpan) {
-            errorSpan.textContent = '';
+        let targetWrapper = inputElement;
+        if (inputElement.parentElement && inputElement.parentElement.style.position === 'relative') {
+            targetWrapper = inputElement.parentElement;
         }
+        
+        const nextEl = targetWrapper.nextSibling;
+        if (nextEl && nextEl.classList && nextEl.classList.contains('error-message')) {
+            nextEl.parentNode.removeChild(nextEl);
+        }
+        inputElement.style.borderColor = '';
     }
 
     document.addEventListener('input', (e) => {
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+            clearError(e.target);
+        }
+    });
+    
+    document.addEventListener('change', (e) => {
         if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
             clearError(e.target);
         }
@@ -161,10 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
         fields.forEach(field => {
             clearError(field);
             const val = field.value.trim();
-
-            if (field.getAttribute('data-custom-required') === 'true') {
+            const isRequired = field.hasAttribute('required') || field.getAttribute('data-custom-required') === 'true';
+            
+            if (isRequired) {
                 if ((field.type === 'checkbox' && !field.checked) || (field.type !== 'checkbox' && val === '')) {
-                    showError(field, 'Please enter valid data');
+                    const fieldName = field.getAttribute('placeholder') || field.previousElementSibling?.textContent || 'This field';
+                    showError(field, fieldName.replace(/[*:]/g, '').trim() + ' is required');
                     isValid = false;
                     if (!firstInvalidInput) firstInvalidInput = field;
                     return;
@@ -173,7 +177,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (field.type === 'email' && val !== '') {
                 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-                    showError(field, 'Enter a valid email address');
+                    showError(field, 'Please enter a valid email address');
+                    isValid = false;
+                    if (!firstInvalidInput) firstInvalidInput = field;
+                    return;
+                }
+            }
+            
+            if (field.type === 'tel' && val !== '') {
+                if (!/^\d{10,15}$/.test(val.replace(/[^0-9]/g, ''))) {
+                    showError(field, 'Please enter a valid phone number');
                     isValid = false;
                     if (!firstInvalidInput) firstInvalidInput = field;
                     return;
@@ -207,15 +220,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (form.id === 'proLoginForm') {
-            const role = document.getElementById('role') ? document.getElementById('role').value : 'client';
+            const roleInput = document.getElementById('loginRole');
+            const role = roleInput ? roleInput.value : 'client';
             const btn = document.getElementById('loginSubmitBtn');
-            if (btn) btn.innerText = "Authenticating...";
+            if (btn) btn.textContent = "Authenticating...";
             
-            const emailInput = document.getElementById('loginEmail') || document.getElementById('email');
+            const emailInput = document.getElementById('loginEmail');
             if(emailInput && emailInput.value) { 
                 let n = emailInput.value.split("@")[0]; 
                 localStorage.setItem("stacklyUserName", n.charAt(0).toUpperCase() + n.slice(1)); 
             }
+            
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("userRole", role);
             
             setTimeout(() => {
                 window.location.href = role === 'admin' ? 'admin-dashboard.html' : 'client-dashboard.html';
@@ -225,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (form.id === 'proSignupForm') {
             const btn = document.getElementById('signupSubmitBtn');
-            if (btn) btn.innerText = "Creating Account...";
+            if (btn) btn.textContent = "Creating Account...";
             setTimeout(() => { window.location.href = 'login.html'; }, 1000);
             return;
         }
@@ -233,16 +250,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const successAction = form.getAttribute('data-success-action');
         if (successAction === '404') {
             window.location.href = '404.html';
+        } else if (successAction === 'login_success') {
+            const role = document.getElementById('loginRole');
+            if(role && role.value === 'admin') window.location.href = 'admin-dashboard.html';
+            else window.location.href = 'client-dashboard.html';
+        } else if (successAction === 'contact_success') {
+            const btn = form.querySelector('button[type="submit"]');
+            if (btn) {
+                btn.textContent = "Message Sent Successfully!";
+                btn.style.backgroundColor = "#10b981";
+            }
         } else if (successAction === 'profile_success' || successAction === 'password_success') {
             const btn = form.querySelector('button[type="submit"]');
             if (btn) {
-                const originalText = btn.innerText;
-                btn.innerText = "Successfully Updated!";
+                const originalText = btn.textContent;
+                btn.textContent = "Successfully Updated!";
                 btn.style.backgroundColor = "#10b981"; 
                 btn.style.color = "#ffffff";
                 btn.style.borderColor = "#10b981";
                 setTimeout(() => { 
-                    btn.innerText = originalText; 
+                    btn.textContent = originalText; 
                     btn.style.backgroundColor = ""; 
                     btn.style.color = "";
                     btn.style.borderColor = "";
@@ -251,11 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             const btn = form.querySelector('button[type="submit"]');
             if (btn) {
-                const originalText = btn.innerText;
-                btn.innerText = "Success!";
+                const originalText = btn.textContent;
+                btn.textContent = "Success!";
                 btn.style.backgroundColor = "#10b981";
                 setTimeout(() => { 
-                    btn.innerText = originalText; 
+                    btn.textContent = originalText; 
                     btn.style.backgroundColor = ""; 
                 }, 3000);
             } else {

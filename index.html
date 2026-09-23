@@ -20,18 +20,23 @@
 <!-- Header / Navbar -->
 <header class="navbar">
 <div class="container nav-container">
-<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
+<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
+<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+    <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
+</div>
+
 <a class="active" href="index.html">Home</a>
 <a class="" href="about.html">About</a>
 <a class="" href="services.html">Services</a>
 <a class="" href="blog.html">Blog</a>
 <a class="" href="contact.html">Contact</a>
-</nav>
-<div class="nav-actions">
-<a class="btn btn-outline" href="login.html">Login</a>
-<a class="btn btn-primary" href="signup.html">Get Started</a>
+
+<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+    <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
+</nav>
+<div class="nav-actions"><a class="btn btn-primary" href="login.html">Login</a></div>
 <div class="mobile-toggle">
 <i class="fa-solid fa-bars"></i>
 </div>
@@ -45,20 +50,17 @@
 <h1>Smarter Accounting. <br/><span style="color:var(--accent);">Stronger Financial Decisions.</span></h1>
 <p>We help businesses expertly manage accounting, taxation, compliance, and comprehensive financial planning for long-term success.</p>
 <div class="hero-buttons">
-<a class="btn btn-primary" href="contact.html">Book a Consultation</a>
-<a class="btn btn-outline" href="services.html">Explore Services</a>
-</div>
+<a class="btn" href="contact.html" style="background-color: #0A192F; color: white; border: none; padding: 1rem 2rem; font-weight: 600;">Book a Consultation</a>
+<a class="btn btn-outline" href="services.html" style="margin-left: 15px;">Explore Services</a></div>
 </div>
 <div class="hero-image" data-aos="fade-left" data-aos-delay="200" style="position:relative;">
 <img alt="Financial Planning" loading="lazy" src="images/stackly_img_23.webp"/>
 <!-- Subtle floating financial element -->
-<div style="position:absolute; bottom:-1.5rem; left:-2rem; background:var(--bg-white); padding:1rem 1.5rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:1rem; animation: float 4s ease-in-out infinite; z-index:10;">
+<div style="position:absolute; bottom:-1.5rem; left:-2rem; background:var(--bg-white); padding:1rem 1.5rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:1rem;  z-index:10;">
 <div style="width:45px; height:45px; background:rgba(16, 185, 129, 0.1); color:#10B981; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;">
 <i class="fa-solid fa-arrow-trend-up"></i>
 </div>
 <div>
-<p style="margin:0; font-weight:800; color:var(--primary); line-height:1.2; font-size:1.25rem;">+24%</p>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light); font-weight:500;">Tax Optimization</p>
 </div>
 </div>
 </div>
@@ -97,37 +99,37 @@
 <i class="fa-solid fa-file-invoice-dollar card-icon"></i>
 <h3>Accounting &amp; Bookkeeping</h3>
 <p>Accurate and timely financial recording to keep your business running smoothly.</p>
-<a class="card-link" href="404.html">Learn More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
 </div>
 <div class="card" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="800">
 <i class="fa-solid fa-scale-balanced card-icon"></i>
 <h3>Tax Planning</h3>
 <p>Strategic tax optimization to minimize liability and maximize returns.</p>
-<a class="card-link" href="404.html">Learn More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
 </div>
 <div class="card" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="800">
 <i class="fa-solid fa-money-check-dollar card-icon"></i>
 <h3>Payroll Management</h3>
 <p>Automated payroll processing, tax filings, and strict regulatory compliance.</p>
-<a class="card-link" href="404.html">Learn More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
 </div>
 <div class="card" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="800">
 <i class="fa-solid fa-chart-line card-icon"></i>
 <h3>Financial Consulting</h3>
 <p>Expert advisory services to guide your business towards sustainable growth.</p>
-<a class="card-link" href="404.html">Learn More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
 </div>
 <div class="card" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="800">
 <i class="fa-solid fa-magnifying-glass-chart card-icon"></i>
 <h3>Audit &amp; Compliance</h3>
 <p>Internal audits, risk assessments, and independent financial verification.</p>
-<a class="card-link" href="404.html">Learn More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
 </div>
 <div class="card" data-aos="zoom-in-up" data-aos-delay="600" data-aos-duration="800">
 <i class="fa-solid fa-briefcase card-icon"></i>
 <h3>Business Advisory</h3>
 <p>Strategic planning, M&amp;A advisory, and operational efficiency analysis.</p>
-<a class="card-link" href="404.html">Learn More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
 </div>
 </div>
 </div>
@@ -240,8 +242,7 @@
 <h2>Client Success Stories</h2>
 <p style="max-width:600px; margin:0 auto; color:var(--text-light);">See what our partners say about our financial consulting.</p>
 </div>
-<div class="grid-3">
-<div class="card testimonial-card" data-aos="fade-up" data-aos-delay="100">
+<div class="marquee-container" style="overflow: hidden; white-space: nowrap; width: 100%; position: relative; padding: 2rem 0;"><div class="marquee-track"><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
 <div>
 <div class="testimonial-stars">
 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -255,8 +256,7 @@
 <p style="margin:0; font-size:0.85rem; color:var(--text-light);">CEO, TechFlow Solutions</p>
 </div>
 </div>
-</div>
-<div class="card testimonial-card" data-aos="fade-up" data-aos-delay="200">
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
 <div>
 <div class="testimonial-stars">
 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -266,12 +266,11 @@
 <div class="testimonial-author">
 <img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
 <div>
-<h4 style="margin:0; font-size:1rem;">David Chen</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Founder, Chen Retail Group</p>
+<h4 style="margin:0; font-size:1rem;">Marcus Johnson</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">CFO, Global Retail</p>
 </div>
 </div>
-</div>
-<div class="card testimonial-card" data-aos="fade-up" data-aos-delay="300">
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
 <div>
 <div class="testimonial-stars">
 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -281,12 +280,109 @@
 <div class="testimonial-author">
 <img alt="Client" loading="lazy" src="images/stackly_img_27.webp"/>
 <div>
-<h4 style="margin:0; font-size:1rem;">Sarah Jenkins</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Director, Helix BioTech</p>
+<h4 style="margin:0; font-size:1rem;">Sarah Williams</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Founder, Bright Ideas</p>
 </div>
 </div>
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
+<div>
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
+</div>
+<div class="testimonial-author">
+<img alt="Client" loading="lazy" src="images/stackly_img_25.webp"/>
+<div>
+<h4 style="margin:0; font-size:1rem;">David Chen</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Director, Nexus Corp</p>
 </div>
 </div>
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
+<div>
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
+</div>
+<div class="testimonial-author">
+<img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
+<div>
+<h4 style="margin:0; font-size:1rem;">Emily Carter</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">VP Finance, Alpha Industries</p>
+</div>
+</div>
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
+<div>
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
+</div>
+<div class="testimonial-author">
+<img alt="Client" loading="lazy" src="images/stackly_img_25.webp"/>
+<div>
+<h4 style="margin:0; font-size:1rem;">Elena Rodriguez</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">CEO, TechFlow Solutions</p>
+</div>
+</div>
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
+<div>
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
+</div>
+<div class="testimonial-author">
+<img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
+<div>
+<h4 style="margin:0; font-size:1rem;">Marcus Johnson</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">CFO, Global Retail</p>
+</div>
+</div>
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
+<div>
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p style="font-style: italic;">"Their audit and compliance team made our latest review entirely stress-free. Professional, secure, and incredibly experienced."</p>
+</div>
+<div class="testimonial-author">
+<img alt="Client" loading="lazy" src="images/stackly_img_27.webp"/>
+<div>
+<h4 style="margin:0; font-size:1rem;">Sarah Williams</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Founder, Bright Ideas</p>
+</div>
+</div>
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
+<div>
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
+</div>
+<div class="testimonial-author">
+<img alt="Client" loading="lazy" src="images/stackly_img_25.webp"/>
+<div>
+<h4 style="margin:0; font-size:1rem;">David Chen</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Director, Nexus Corp</p>
+</div>
+</div>
+</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
+<div>
+<div class="testimonial-stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
+</div>
+<div class="testimonial-author">
+<img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
+<div>
+<h4 style="margin:0; font-size:1rem;">Emily Carter</h4>
+<p style="margin:0; font-size:0.85rem; color:var(--text-light);">VP Finance, Alpha Industries</p>
+</div>
+</div>
+</div></div></div>
 </div>
 </section>
 <!-- Section 8: Blog Preview -->
@@ -305,7 +401,7 @@
 <span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Oct 12, 2026</span>
 </div>
 <h3 style="font-size:1.25rem;">Tax Planning Strategies for Growing Businesses</h3>
-<a class="card-link" href="404.html" style="margin-top:1rem;">Read More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;" style="margin-top:1rem;">Read More </a>
 </div>
 </div>
 <div class="card" data-aos="fade-up" data-aos-delay="200" style="padding:0; border:none;">
@@ -316,7 +412,7 @@
 <span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Oct 05, 2026</span>
 </div>
 <h3 style="font-size:1.25rem;">How Accurate Bookkeeping Improves Business Decisions</h3>
-<a class="card-link" href="404.html" style="margin-top:1rem;">Read More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;" style="margin-top:1rem;">Read More </a>
 </div>
 </div>
 <div class="card" data-aos="fade-up" data-aos-delay="300" style="padding:0; border:none;">
@@ -327,7 +423,7 @@
 <span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Sep 28, 2026</span>
 </div>
 <h3 style="font-size:1.25rem;">Financial Planning Mistakes Businesses Should Avoid</h3>
-<a class="card-link" href="404.html" style="margin-top:1rem;">Read More </a>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;" style="margin-top:1rem;">Read More </a>
 </div>
 </div>
 </div>
@@ -339,9 +435,8 @@
 <div class="bg-animated" data-aos="zoom-in" style="text-align:center; padding: 6rem 3rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
 <h2 style="color:white;">Ready to Take Control of Your Finances?</h2>
 <p style="margin-bottom:3rem; font-size:1.2rem; max-width:600px; margin-left:auto; margin-right:auto; color:rgba(255,255,255,0.9);">Join the leading businesses that trust Stackly for their accounting and advisory needs.</p>
-<div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;">
+<div style="display:flex; justify-content:center;">
 <a class="btn btn-white" href="contact.html" style="color:var(--primary); font-weight:700;">Book a Consultation</a>
-<a class="btn btn-outline" href="contact.html" style="color:white; border-color:rgba(255,255,255,0.5);">Contact Us</a>
 </div>
 </div>
 </div>
@@ -352,7 +447,7 @@
 <div class="container grid-4">
 <!-- Col 1: Logo & Info -->
 <div>
-<a class="logo" href="index.html" style="color:white; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem; font-size:1.5rem; font-weight:700; text-decoration:none;"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
+<a class="logo" href="index.html" style="color:white; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem; font-size:1.5rem; font-weight:700; text-decoration:none;"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <p style="color:#8892B0; margin-bottom:2rem; font-size:0.95rem; line-height:1.6;">Empowering businesses with precise accounting, forward-thinking tax strategies, and unparalleled financial advice that fuels sustainable growth.</p>
 <div class="social-links" style="display:flex; gap:1rem;">
 <a aria-label="Visit our social media" href="404.html" onmouseout="this.style.background='rgba(255,255,255,0.05)'" onmouseover="this.style.background='var(--primary)'" style="width:36px; height:36px; background:rgba(255,255,255,0.05); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; transition:0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -363,13 +458,7 @@
 <!-- Col 2: Quick Links -->
 <div>
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Quick Links</h4>
-<ul style="list-style:none; padding:0; margin:0;">
-<li style="margin-bottom:0.75rem;"><a href="about.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">About Us</a></li>
-<li style="margin-bottom:0.75rem;"><a href="services.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Our Services</a></li>
-<li style="margin-bottom:0.75rem;"><a href="blog.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Financial Blog</a></li>
-<li style="margin-bottom:0.75rem;"><a href="contact.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Contact Us</a></li>
-<li style="margin-bottom:0.75rem;"><a href="login.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Client Portal</a></li>
-</ul>
+<ul style="list-style:none; padding:0; margin:0;"><li style="margin-bottom:0.75rem;"><a href="index.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Home</a></li><li style="margin-bottom:0.75rem;"><a href="about.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">About</a></li><li style="margin-bottom:0.75rem;"><a href="services.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Service</a></li><li style="margin-bottom:0.75rem;"><a href="blog.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Blog</a></li><li style="margin-bottom:0.75rem;"><a href="contact.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Contact</a></li></ul>
 </div>
 <!-- Col 3: Services & Resources -->
 <div>
@@ -390,12 +479,12 @@
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Contact Info</h4>
 <ul style="list-style:none; padding:0; margin:0; margin-bottom:1.5rem;">
 <li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-location-dot" style="margin-top:5px; color:var(--accent);"></i>  MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</li>
-<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:center;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i>  9090909090</li>
-<li style="display:flex; gap:10px; color:#8892B0; align-items:center;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com</li>
+<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i> 9090909090, 8080808080</li>
+<li style="display:flex; gap:10px; color:#8892B0; align-items:flex-start;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com, info@stackly.com</li>
 </ul>
 <h4 style="color:white; margin-bottom:1rem; font-size:1rem;">Subscribe to Newsletter</h4>
-<form onsubmit="event.preventDefault(); alert('Subscribed to newsletter!');" style="display:flex;">
-<input aria-label="Email Address for Newsletter" placeholder="Email Address" required="" style="padding:0.75rem; border:none; outline:none; border-radius:4px 0 0 4px; flex:1; font-family:inherit;" type="email"/>
+<form data-success-action="404" novalidate="novalidate" style="display:flex;">
+<input aria-label="Email Address for Newsletter" data-custom-required="true" id="dynamicField_index_1" placeholder="Email Address" style="padding:0.75rem; border:none; outline:none; border-radius:4px 0 0 4px; flex:1; font-family:inherit;" type="email"/>
 <button aria-label="Subscribe to newsletter" class="btn btn-primary" style="border-radius:0 4px 4px 0; padding:0.75rem 1rem; flex-shrink:0;" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
 </form>
 </div>
@@ -405,8 +494,8 @@
 <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
 <p style="color:#8892B0; margin:0; font-size:0.9rem;">© 2026 Stackly. All rights reserved.</p>
 <div style="display:flex; gap:1.5rem;">
-<a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Privacy Policy</a>
-<a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Terms &amp; Conditions</a>
+<a href="404.html" onclick="window.location.href='404.html'; return false;" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Privacy Policy</a>
+<a href="404.html" onclick="window.location.href='404.html'; return false;" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Terms &amp; Conditions</a>
 </div>
 </div>
 </div>

@@ -17,49 +17,75 @@
 <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
-<!-- Header / Navbar -->
 <header class="navbar">
 <div class="container nav-container">
-<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
+<a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
+<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+    <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
+</div>
+
 <a class="" href="index.html">Home</a>
 <a class="" href="about.html">About</a>
 <a class="" href="services.html">Services</a>
 <a class="active" href="blog.html">Blog</a>
 <a class="" href="contact.html">Contact</a>
-</nav>
-<div class="nav-actions">
-<a class="btn btn-outline" href="login.html">Login</a>
-<a class="btn btn-primary" href="signup.html">Get Started</a>
+
+<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+    <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
+</nav>
+<div class="nav-actions"><a class="btn btn-primary" href="login.html">Login</a></div>
 <div class="mobile-toggle">
 <i class="fa-solid fa-bars"></i>
 </div>
 </div>
 </header>
 <main>
-<!-- 1. Hero -->
-<section class="hero" style="min-height: 40vh; padding-top: 10rem; background-color: var(--bg-white); background-image: radial-gradient(var(--border) 1px, transparent 1px); background-size: 40px 40px; display: flex; align-items: center;">
-<div class="container" data-aos="fade-up" style="text-align:center;">
-<h1 style="font-size:4rem; margin-bottom:1rem;">Financial Insights</h1>
-<p style="max-width: 600px; margin: 0 auto; font-size: 1.25rem; color:var(--text-light);">Expert advice, tax tips, and business strategies from our industry professionals.</p>
+<!-- Page Header -->
+<section class="section section-primary" style="background: var(--primary); padding: 10rem 0 4rem 0; text-align:center;">
+<div class="container">
+<h1 style="color:white; font-size:3rem; margin-bottom:1rem;">Our Blog</h1>
+<p style="color:rgba(255,255,255,0.9); font-size:1.15rem; max-width:600px; margin:0 auto;">Insights, strategies, and updates from the world of finance.</p>
 </div>
 </section>
-<!-- 2. Featured Article -->
+<!-- 2. Featured Articles (Static Top 3) -->
 <section class="section section-light" style="padding-top:3rem; padding-bottom:3rem;">
 <div class="container">
-<div class="card" data-aos="fade-up" style="padding:0; border:1px solid var(--border); display:flex; flex-wrap:wrap; overflow:hidden;">
-<div style="flex: 1 1 50%; min-height: 350px;">
-<img alt="Stock Market" loading="lazy" src="images/stackly_img_14.webp" style="width:100%; height:100%; object-fit:cover;"/>
+<div style="text-align:center; margin-bottom: 2rem;">
+<h2>Featured Insights</h2>
+<p style="color:var(--text-light);">Handpicked articles from our experts.</p>
 </div>
-<div style="flex: 1 1 50%; padding: 4rem; display:flex; flex-direction:column; justify-content:center; background:var(--bg-white);">
-<div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
-<span class="badge" style="background:var(--accent); color:white;">Featured</span>
-<span style="color:var(--text-light); font-size:0.9rem; font-weight:600;"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Oct 20, 2026</span>
+<div class="grid-3">
+<!-- Business -->
+<div class="card" style="padding:0; border:none; overflow:hidden;">
+<img alt="Business" onerror="this.src='images/stackly_img_2.webp'" src="images/stackly_img_20.webp" style="width:100%; height:200px; object-fit:cover;"/>
+<div style="padding:1.5rem; display:flex; flex-direction:column;">
+<span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">Business</span>
+<h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Scaling Your Enterprise Effectively</h3>
+<p style="color:var(--text-light); margin-bottom:1.5rem;">Strategic moves every CEO should know.</p>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Read More</a>
 </div>
-<h2 style="font-size:2.25rem; margin-bottom:1.5rem;">The Future of Corporate Taxation: What to Expect in 2027</h2>
-<p style="color:var(--text-light); margin-bottom:2.5rem; font-size:1.1rem; line-height:1.7;">An in-depth analysis of upcoming legislative changes and how forward-thinking businesses can proactively adjust their financial strategies to remain compliant and profitable in the new fiscal landscape.</p>
-<a class="btn btn-primary" href="blog.html" style="align-self:flex-start;">Read Full Article</a>
+</div>
+<!-- Tax -->
+<div class="card" style="padding:0; border:none; overflow:hidden;">
+<img alt="Tax" onerror="this.src='images/stackly_img_2.webp'" src="images/stackly_img_16.webp" style="width:100%; height:200px; object-fit:cover;"/>
+<div style="padding:1.5rem; display:flex; flex-direction:column;">
+<span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">Tax</span>
+<h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Corporate Tax Optimization</h3>
+<p style="color:var(--text-light); margin-bottom:1.5rem;">Minimize liability, maximize growth.</p>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Read More</a>
+</div>
+</div>
+<!-- Accounting -->
+<div class="card" style="padding:0; border:none; overflow:hidden;">
+<img alt="Accounting" onerror="this.src='images/stackly_img_2.webp'" src="images/stackly_img_15.webp" style="width:100%; height:200px; object-fit:cover;"/>
+<div style="padding:1.5rem; display:flex; flex-direction:column;">
+<span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">Accounting</span>
+<h3 style="font-size:1.25rem; margin-bottom:0.75rem;">The Future of Cloud Accounting</h3>
+<p style="color:var(--text-light); margin-bottom:1.5rem;">How technology shifts bookkeeping.</p>
+<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Read More</a>
+</div>
 </div>
 </div>
 </div>
@@ -68,125 +94,39 @@
 <section style="padding: 1.5rem 0; border-bottom: 1px solid var(--border); background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); position:sticky; top:75px; z-index:100; box-shadow:0 4px 20px rgba(0,0,0,0.02);">
 <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.5rem;">
 <div style="display:flex; gap:0.75rem; flex-wrap:wrap; flex:1;">
-<button class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">All</button>
-<button class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Accounting</button>
-<button class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Tax</button>
-<button class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Business</button>
-<button class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Finance</button>
-<button class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Compliance</button>
+<button class="btn btn-primary" id="btn-All" onclick="filterCategory('All')" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">All</button>
+<button class="btn btn-outline" id="btn-Accounting" onclick="filterCategory('Accounting')" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Accounting</button>
+<button class="btn btn-outline" id="btn-Tax" onclick="filterCategory('Tax')" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Tax</button>
+<button class="btn btn-outline" id="btn-Business" onclick="filterCategory('Business')" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Business</button>
+<button class="btn btn-outline" id="btn-Finance" onclick="filterCategory('Finance')" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Finance</button>
+<button class="btn btn-outline" id="btn-Compliance" onclick="filterCategory('Compliance')" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Compliance</button>
 </div>
 <div style="flex:0 1 320px; position:relative;">
-<input class="form-control" placeholder="Search articles..." style="padding-left:2.75rem; width:100%; border-radius:99px;" type="text"/>
+<input class="form-control" id="blogSearchInput" onkeyup="searchArticles(this.value)" placeholder="Search articles..." style="padding-left:2.75rem; width:100%; border-radius:99px;" type="text"/>
 <i class="fa-solid fa-search" style="position:absolute; left:1.25rem; top:50%; transform:translateY(-50%); color:var(--text-light);"></i>
 </div>
 </div>
 </section>
-<!-- 4. Blog Cards Grid -->
+<!-- 4. Dynamic Blog Grid -->
 <section class="section section-light">
-<div class="container grid-3">
-<!-- Card 1 -->
-<div class="card" data-aos="fade-up" data-aos-delay="100" style="padding:0; border:none;">
-<img alt="Accounting" loading="lazy" src="images/stackly_img_15.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2.5rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; font-size:0.85rem;">
-<span class="badge badge-success">Accounting</span>
-<span style="color:var(--text-light); font-weight:600;"><i class="fa-regular fa-calendar"></i> Oct 12, 2026</span>
-</div>
-<h3 style="font-size:1.35rem; line-height:1.4;">How Accurate Bookkeeping Improves Business Decisions</h3>
-<p style="font-size:0.95rem; color:var(--text-light); margin-top:1rem; margin-bottom:2rem;">Discover why maintaining clean, real-time ledgers is the foundational step to confident executive leadership.</p>
-<a class="card-link" href="404.html">Read More </a>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="card" data-aos="fade-up" data-aos-delay="200" style="padding:0; border:none;">
-<img alt="Tax Planning" loading="lazy" src="images/stackly_img_16.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2.5rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; font-size:0.85rem;">
-<span class="badge badge-warning">Tax</span>
-<span style="color:var(--text-light); font-weight:600;"><i class="fa-regular fa-calendar"></i> Oct 05, 2026</span>
-</div>
-<h3 style="font-size:1.35rem; line-height:1.4;">Tax Planning Strategies for Growing Businesses</h3>
-<p style="font-size:0.95rem; color:var(--text-light); margin-top:1rem; margin-bottom:2rem;">Discover key deductions and strategies to optimize your corporate tax liability before the fiscal year ends.</p>
-<a class="card-link" href="404.html">Read More </a>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="card" data-aos="fade-up" data-aos-delay="300" style="padding:0; border:none;">
-<img alt="Finance" loading="lazy" src="images/stackly_img_17.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2.5rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; font-size:0.85rem;">
-<span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent);">Finance</span>
-<span style="color:var(--text-light); font-weight:600;"><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span>
-</div>
-<h3 style="font-size:1.35rem; line-height:1.4;">Financial Planning Mistakes Businesses Should Avoid</h3>
-<p style="font-size:0.95rem; color:var(--text-light); margin-top:1rem; margin-bottom:2rem;">Learn the top errors small and medium businesses make when forecasting revenue and managing cash flow.</p>
-<a class="card-link" href="404.html">Read More </a>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="card" data-aos="fade-up" data-aos-delay="100" style="padding:0; border:none;">
-<img alt="Compliance" loading="lazy" src="images/stackly_img_18.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2.5rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; font-size:0.85rem;">
-<span class="badge" style="background:rgba(239, 68, 68, 0.1); color:var(--error);">Compliance</span>
-<span style="color:var(--text-light); font-weight:600;"><i class="fa-regular fa-calendar"></i> Sep 15, 2026</span>
-</div>
-<h3 style="font-size:1.35rem; line-height:1.4;">Navigating the Newest SEC Regulations</h3>
-<p style="font-size:0.95rem; color:var(--text-light); margin-top:1rem; margin-bottom:2rem;">A comprehensive breakdown of the latest regulatory updates and how they impact standard reporting procedures.</p>
-<a class="card-link" href="404.html">Read More </a>
-</div>
-</div>
-<!-- Card 5 -->
-<div class="card" data-aos="fade-up" data-aos-delay="200" style="padding:0; border:none;">
-<img alt="Business" loading="lazy" src="images/stackly_img_19.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2.5rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; font-size:0.85rem;">
-<span class="badge badge-success">Business</span>
-<span style="color:var(--text-light); font-weight:600;"><i class="fa-regular fa-calendar"></i> Sep 02, 2026</span>
-</div>
-<h3 style="font-size:1.35rem; line-height:1.4;">When is the Right Time to Hire a Virtual CFO?</h3>
-<p style="font-size:0.95rem; color:var(--text-light); margin-top:1rem; margin-bottom:2rem;">Explore the strategic threshold where shifting from basic bookkeeping to executive-level advising makes sense.</p>
-<a class="card-link" href="404.html">Read More </a>
-</div>
-</div>
-<!-- Card 6 -->
-<div class="card" data-aos="fade-up" data-aos-delay="300" style="padding:0; border:none;">
-<img alt="Finance" loading="lazy" src="images/stackly_img_20.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2.5rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; font-size:0.85rem;">
-<span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent);">Finance</span>
-<span style="color:var(--text-light); font-weight:600;"><i class="fa-regular fa-calendar"></i> Aug 22, 2026</span>
-</div>
-<h3 style="font-size:1.35rem; line-height:1.4;">The Art of Sustainable Mergers &amp; Acquisitions</h3>
-<p style="font-size:0.95rem; color:var(--text-light); margin-top:1rem; margin-bottom:2rem;">How to evaluate target companies properly to ensure post-merger integration is financially viable.</p>
-<a class="card-link" href="404.html">Read More </a>
-</div>
-</div>
-</div>
-<!-- 5. Pagination -->
-<div class="container" data-aos="fade-up" style="display:flex; justify-content:center; margin-top: 2rem;">
-<div style="display:flex; gap:0.5rem;">
-<button class="btn btn-outline" disabled="" style="padding:0.5rem 1.25rem; border-color:var(--border); color:var(--text-light);"><i class="fa-solid fa-chevron-left"></i></button>
-<button class="btn btn-primary" style="padding:0.5rem 1.25rem;">1</button>
-<button class="btn btn-outline" style="padding:0.5rem 1.25rem;">2</button>
-<button class="btn btn-outline" style="padding:0.5rem 1.25rem;">3</button>
-<span style="display:flex; align-items:flex-end; padding:0 0.5rem; color:var(--text-light);">...</span>
-<button class="btn btn-outline" style="padding:0.5rem 1.25rem;">8</button>
-<button class="btn btn-outline" style="padding:0.5rem 1.25rem;"><i class="fa-solid fa-chevron-right"></i></button>
-</div>
+<div class="container">
+<div class="grid-3" id="blogGrid"></div>
+<div id="noResults" style="display:none; text-align:center; padding: 4rem 0; font-size: 1.5rem; color: var(--text-light);">This content is not available</div>
+<div id="pagination" style="display:flex; justify-content:center; gap:0.5rem; margin-top:3rem;"></div>
 </div>
 </section>
-<!-- 6. Newsletter Subscription -->
-<section class="section section-white">
+<!-- Newsletter / CTA -->
+<section class="section section-primary" style="background:var(--primary); padding:4rem 0; margin-top:2rem;">
 <div class="container">
-<div class="bg-animated" data-aos="zoom-in" style="padding: 5rem 4rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); display:flex; flex-wrap:wrap; align-items:center; gap:3rem;">
+<div class="bg-animated" data-aos="zoom-in" style="padding: 3rem; border-radius:var(--radius-lg); display:flex; flex-wrap:wrap; align-items:center; gap:3rem;">
 <div style="flex:1 1 400px; color:white;">
 <h2 style="color:white; margin-bottom:1rem; font-size:2.5rem;">Subscribe to Our Newsletter</h2>
 <p style="font-size:1.15rem; color:rgba(255,255,255,0.9); margin:0; line-height:1.6;">Get the latest financial insights, tax updates, and business strategies delivered straight to your inbox every week.</p>
 </div>
 <div style="flex:1 1 400px;">
-<form onsubmit="event.preventDefault(); alert('Subscribed successfully!');" style="display:flex; gap:0.5rem; background:white; padding:0.5rem; border-radius:99px;">
-<input placeholder="Enter your email address..." required="" style="flex:1; border:none; padding:1rem 1.5rem; outline:none; font-family:inherit; font-size:1rem; border-radius:99px; color:var(--primary);" type="email"/>
+<form data-success-action="404" novalidate="novalidate" style="display:flex; gap:0.5rem; background:white; padding:0.5rem; border-radius:99px;">
+<input data-custom-required="true" id="dynamicField_blog_newsletter_1" placeholder="Enter your email address..." style="flex:1; border:none; padding:1rem 1.5rem; outline:none; font-family:inherit; font-size:1rem; border-radius:99px; color:var(--primary);" type="email"/>
+
 <button class="btn btn-primary" style="white-space:nowrap; border-radius:99px; padding: 0.75rem 2rem;" type="submit">Subscribe Now</button>
 </form>
 <p style="color:rgba(255,255,255,0.7); font-size:0.9rem; margin-top:1.5rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-shield-halved"></i> We respect your privacy. No spam, ever.</p>
@@ -195,12 +135,11 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
 <footer class="footer" style="background-color: #0A192F; color: white; padding-top: 2rem;">
 <div class="container grid-4">
 <!-- Col 1: Logo & Info -->
 <div>
-<a class="logo" href="index.html" style="color:white; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem; font-size:1.5rem; font-weight:700; text-decoration:none;"><img alt="Logo" src="logo-blue.webp" style="height: 70px; width: auto;"/></a>
+<a class="logo" href="index.html" style="color:white; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem; font-size:1.5rem; font-weight:700; text-decoration:none;"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <p style="color:#8892B0; margin-bottom:2rem; font-size:0.95rem; line-height:1.6;">Empowering businesses with precise accounting, forward-thinking tax strategies, and unparalleled financial advice that fuels sustainable growth.</p>
 <div class="social-links" style="display:flex; gap:1rem;">
 <a aria-label="Visit our social media" href="404.html" onmouseout="this.style.background='rgba(255,255,255,0.05)'" onmouseover="this.style.background='var(--primary)'" style="width:36px; height:36px; background:rgba(255,255,255,0.05); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; transition:0.2s;"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -211,13 +150,7 @@
 <!-- Col 2: Quick Links -->
 <div>
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Quick Links</h4>
-<ul style="list-style:none; padding:0; margin:0;">
-<li style="margin-bottom:0.75rem;"><a href="about.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">About Us</a></li>
-<li style="margin-bottom:0.75rem;"><a href="services.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Our Services</a></li>
-<li style="margin-bottom:0.75rem;"><a href="blog.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Financial Blog</a></li>
-<li style="margin-bottom:0.75rem;"><a href="contact.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Contact Us</a></li>
-<li style="margin-bottom:0.75rem;"><a href="login.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Client Portal</a></li>
-</ul>
+<ul style="list-style:none; padding:0; margin:0;"><li style="margin-bottom:0.75rem;"><a href="index.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Home</a></li><li style="margin-bottom:0.75rem;"><a href="about.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">About</a></li><li style="margin-bottom:0.75rem;"><a href="services.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Service</a></li><li style="margin-bottom:0.75rem;"><a href="blog.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Blog</a></li><li style="margin-bottom:0.75rem;"><a href="contact.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Contact</a></li></ul>
 </div>
 <!-- Col 3: Services & Resources -->
 <div>
@@ -238,12 +171,12 @@
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Contact Info</h4>
 <ul style="list-style:none; padding:0; margin:0; margin-bottom:1.5rem;">
 <li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-location-dot" style="margin-top:5px; color:var(--accent);"></i>  MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</li>
-<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:center;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i>  9090909090</li>
-<li style="display:flex; gap:10px; color:#8892B0; align-items:center;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com</li>
+<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i> 9090909090, 8080808080</li>
+<li style="display:flex; gap:10px; color:#8892B0; align-items:flex-start;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com, info@stackly.com</li>
 </ul>
 <h4 style="color:white; margin-bottom:1rem; font-size:1rem;">Subscribe to Newsletter</h4>
-<form onsubmit="event.preventDefault(); alert('Subscribed to newsletter!');" style="display:flex;">
-<input aria-label="Email Address for Newsletter" placeholder="Email Address" required="" style="padding:0.75rem; border:none; outline:none; border-radius:4px 0 0 4px; flex:1; font-family:inherit;" type="email"/>
+<form data-success-action="404" novalidate="novalidate" style="display:flex;">
+<input aria-label="Email Address for Newsletter" data-custom-required="true" id="dynamicField_index_1" placeholder="Email Address" style="padding:0.75rem; border:none; outline:none; border-radius:4px 0 0 4px; flex:1; font-family:inherit;" type="email"/>
 <button aria-label="Subscribe to newsletter" class="btn btn-primary" style="border-radius:0 4px 4px 0; padding:0.75rem 1rem; flex-shrink:0;" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
 </form>
 </div>
@@ -253,12 +186,140 @@
 <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
 <p style="color:#8892B0; margin:0; font-size:0.9rem;">© 2026 Stackly. All rights reserved.</p>
 <div style="display:flex; gap:1.5rem;">
-<a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Privacy Policy</a>
-<a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Terms &amp; Conditions</a>
+<a href="404.html" onclick="window.location.href='404.html'; return false;" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Privacy Policy</a>
+<a href="404.html" onclick="window.location.href='404.html'; return false;" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='white'" style="color:#8892B0; text-decoration:none; font-size:0.9rem; transition:0.2s;">Terms &amp; Conditions</a>
 </div>
 </div>
 </div>
 </footer>
+<!-- JS Engine -->
+<script>
+    const articles = [
+    { category: 'Accounting', title: 'Accounting Insight #1', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_1.webp' },
+    { category: 'Accounting', title: 'Accounting Insight #2', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_2.webp' },
+    { category: 'Accounting', title: 'Accounting Insight #3', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_3.webp' },
+    { category: 'Accounting', title: 'Accounting Insight #4', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_4.webp' },
+    { category: 'Tax', title: 'Tax Insight #5', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_5.webp' },
+    { category: 'Tax', title: 'Tax Insight #6', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_6.webp' },
+    { category: 'Tax', title: 'Tax Insight #7', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_7.webp' },
+    { category: 'Tax', title: 'Tax Insight #8', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_8.webp' },
+    { category: 'Business', title: 'Business Insight #9', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_9.webp' },
+    { category: 'Business', title: 'Business Insight #10', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_10.webp' },
+    { category: 'Business', title: 'Business Insight #11', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_11.webp' },
+    { category: 'Business', title: 'Business Insight #12', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_12.webp' },
+    { category: 'Finance', title: 'Finance Insight #13', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/stackly_img_13.webp' },
+    { category: 'Finance', title: 'Finance Insight #14', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/stackly_img_14.webp' },
+    { category: 'Finance', title: 'Finance Insight #15', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/stackly_img_21.webp' },
+    { category: 'Compliance', title: 'Compliance Insight #16', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_img_23.webp' },
+    { category: 'Compliance', title: 'Compliance Insight #17', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_img_24.webp' },
+    { category: 'Compliance', title: 'Compliance Insight #18', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_img_27.webp' },
+];
+
+function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
+    
+    const mixedArticles = shuffle([...articles]);
+
+    let currentCategory = 'All';
+    let currentSearch = '';
+    let currentPage = 1;
+    const itemsPerPage = 3;
+
+    function renderGrid() {
+        const grid = document.getElementById('blogGrid');
+        const noRes = document.getElementById('noResults');
+        const pag = document.getElementById('pagination');
+        
+        let dataToFilter = currentCategory === 'All' ? mixedArticles : articles;
+        
+        let filtered = dataToFilter.filter(a => {
+            let catMatch = (currentCategory === 'All') || (a.category === currentCategory);
+            let searchMatch = a.title.toLowerCase().includes(currentSearch.toLowerCase()) || a.desc.toLowerCase().includes(currentSearch.toLowerCase());
+            return catMatch && searchMatch;
+        });
+
+        if (filtered.length === 0) {
+            window.location.href = '404.html';
+            return;
+        } else {
+            grid.style.display = 'grid';
+            pag.style.display = 'flex';
+            noRes.style.display = 'none';
+        }
+
+        const totalPages = Math.ceil(filtered.length / itemsPerPage);
+        if(currentPage > totalPages && totalPages > 0) currentPage = totalPages;
+        
+        const start = (currentPage - 1) * itemsPerPage;
+        const currentData = filtered.slice(start, start + itemsPerPage);
+
+        grid.innerHTML = '';
+        currentData.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.style = 'padding:0; border:none; overflow:hidden; display:flex; flex-direction:column;';
+            card.innerHTML = `
+                <img src="${article.img}" alt="${article.title}" style="width:100%; height:200px; object-fit:cover;" onerror="this.src='images/stackly_img_2.webp'">
+                <div style="padding: 1.5rem; display:flex; flex-direction:column; flex:1;">
+                    <span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">${article.category}</span>
+                    <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">${article.title}</h3>
+                    <p style="color:var(--text-light); margin-bottom:1.5rem; flex:1;">${article.desc}</p>
+                    <a href="404.html" onclick="window.location.href='404.html'; return false;" class="card-link">Read More</a>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        pag.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.innerText = i;
+            btn.className = 'btn';
+            btn.style = i === currentPage 
+                ? 'padding: 0.5rem 1rem; background: var(--primary); color: white; border: none; cursor:pointer;'
+                : 'padding: 0.5rem 1rem; background: var(--bg-white); color: var(--primary); border: 1px solid var(--border); cursor:pointer;';
+            
+            btn.onclick = () => {
+                currentPage = i;
+                renderGrid();
+                window.scrollTo({top: document.getElementById('blogGrid').offsetTop - 150, behavior: 'smooth'});
+            };
+            pag.appendChild(btn);
+        }
+    }
+
+    function filterCategory(cat) {
+        currentCategory = cat;
+        currentPage = 1;
+        
+        const buttons = document.querySelectorAll('section[style*="position:sticky"] button');
+        buttons.forEach(b => {
+            if(b.innerText.trim() === cat) {
+                b.className = 'btn btn-primary';
+            } else {
+                b.className = 'btn btn-outline';
+            }
+        });
+        renderGrid();
+    }
+
+    function searchArticles(val) {
+        currentSearch = val;
+        currentPage = 1;
+        renderGrid();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderGrid();
+    });
+</script>
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Custom JS -->
