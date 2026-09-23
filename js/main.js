@@ -1,3 +1,27 @@
+
+// =========================================
+// PRELOADER
+// =========================================
+(function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        const removePreloader = () => {
+            if (preloader.classList.contains('preloader-hidden')) return;
+            preloader.classList.add('preloader-hidden');
+            setTimeout(() => {
+                document.body.classList.remove('preloader-active');
+                if(preloader.parentNode) preloader.parentNode.removeChild(preloader);
+            }, 750); // Matches CSS transition duration
+        };
+
+        // Remove on window load
+        window.addEventListener('load', removePreloader);
+
+        // Fallback: Remove after 4 seconds max to prevent infinite loading
+        setTimeout(removePreloader, 4000);
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize AOS
     if (typeof AOS !== 'undefined') {
