@@ -14,29 +14,25 @@
 <!-- AOS Animation CSS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 </head>
 <body class="preloader-active">
 
+
 <!-- Preloader -->
 <div id="preloader">
-    <div class="preloader-content">
-        <div class="preloader-logo-wrapper">
-            <div class="preloader-glow"></div>
-            <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo">
-        </div>
-        <div class="preloader-bar-container">
-            <div class="preloader-bar"></div>
+    <div class="premium-preloader">
+        <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo-anim">
+        <div class="preloader-line">
+            <div class="preloader-line-inner"></div>
         </div>
     </div>
-</div>
-
-<!-- Header / Navbar -->
+</div><!-- Header / Navbar -->
 <header class="navbar">
 <div class="container nav-container">
 <a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
-<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+<div class="mobile-only-logo" style="margin-bottom: 2rem;">
     <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 </div>
 
@@ -46,7 +42,7 @@
 <a class="" href="blog.html">Blog</a>
 <a class="" href="contact.html">Contact</a>
 
-<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+<div class="mobile-only-btn" style="margin-top: auto; margin-bottom: 2rem; padding-top: 1rem; width: 100%;">
     <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
 </nav>
@@ -59,7 +55,7 @@
 <main>
 <!-- 1. Hero & Overview -->
 <section class="hero" style="min-height: 45vh; padding-top: 10rem; background-color: var(--bg-white); background-image: radial-gradient(var(--border) 1px, transparent 1px); background-size: 40px 40px; display: flex; align-items: center;">
-<div class="container" data-aos="fade-up" style="text-align:center;">
+<div class="container" style="text-align:center;">
 <h1 style="font-size:4rem; margin-bottom: 1rem;">Our Expertise</h1>
 <p style="max-width: 700px; margin: 0 auto; font-size: 1.25rem; color:var(--text-light);">Comprehensive, end-to-end financial solutions designed to protect your wealth, ensure strict compliance, and drive sustainable corporate growth.</p>
 </div>
@@ -68,130 +64,190 @@
 <section class="section section-light">
 <div class="container grid-2">
 <!-- Service 1 -->
-<div class="card" data-aos="fade-up" data-aos-delay="100">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-file-invoice-dollar card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">Accounting &amp; Bookkeeping</h3>
 <p>End-to-end bookkeeping, financial statement preparation, and ledger management designed to keep your business running smoothly without administrative overhead.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Real-time financial visibility</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Error-free ledger management</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Automated expense tracking</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Real-time financial visibility</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Error-free ledger management</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Automated expense tracking</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 <!-- Service 2 -->
-<div class="card" data-aos="fade-up" data-aos-delay="200">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-scale-balanced card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">Tax Services</h3>
 <p>Corporate tax preparation, individual planning, IRS representation, and strategic optimization to ensure you never overpay while remaining compliant.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Maximized deductions &amp; credits</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Proactive tax strategy formulation</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Seamless audit defense and representation</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Maximized deductions &amp; credits</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Proactive tax strategy formulation</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Seamless audit defense and representation</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 <!-- Service 3 -->
-<div class="card" data-aos="fade-up" data-aos-delay="100">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-money-check-dollar card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">Payroll Management</h3>
 <p>Automated payroll processing, accurate tax filings, and strict compliance with local, state, and federal labor regulations.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> On-time, accurate employee payments</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Effortless W-2 &amp; 1099 processing</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Zero penalty guarantee on filings</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> On-time, accurate employee payments</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Effortless W-2 &amp; 1099 processing</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Zero penalty guarantee on filings</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 <!-- Service 4 -->
-<div class="card" data-aos="fade-up" data-aos-delay="200">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-magnifying-glass-chart card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">Audit &amp; Assurance</h3>
 <p>Comprehensive internal audits, rigorous risk assessments, and independent financial verification to build unparalleled stakeholder trust.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Enhanced operational transparency</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Early risk identification and mitigation</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Increased investor and board confidence</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Enhanced operational transparency</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Early risk identification and mitigation</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Increased investor and board confidence</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 <!-- Service 5 -->
-<div class="card" data-aos="fade-up" data-aos-delay="100">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-briefcase card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">Business Consulting</h3>
 <p>Strategic growth planning, M&amp;A advisory, and operational efficiency analysis to help you scale smartly and sustainably.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Data-driven expansion strategies</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Optimized operational workflows</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Seamless mergers &amp; acquisitions support</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Data-driven expansion strategies</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Optimized operational workflows</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Seamless mergers &amp; acquisitions support</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 <!-- Service 6 -->
-<div class="card" data-aos="fade-up" data-aos-delay="200">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-seedling card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">Financial Planning</h3>
 <p>Long-term wealth generation strategies, retirement planning, and rigorous investment portfolio analysis for individuals and corporations.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Secure, diversified financial portfolios</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Clearly defined retirement pathways</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Robust estate and succession planning</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Secure, diversified financial portfolios</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Clearly defined retirement pathways</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Robust estate and succession planning</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 <!-- Service 7 -->
-<div class="card" data-aos="fade-up" data-aos-delay="100">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-clipboard-check card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">Compliance</h3>
 <p>Navigating the complex web of financial laws and local regulations so you can focus entirely on your core business operations.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Complete regulatory adherence</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Protection against legal penalties and fines</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Continuous monitoring of code updates</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Complete regulatory adherence</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Protection against legal penalties and fines</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Continuous monitoring of code updates</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 <!-- Service 8 -->
-<div class="card" data-aos="fade-up" data-aos-delay="200">
+<div class="card" data-aos="fade-up">
 <i class="fa-solid fa-user-tie card-icon"></i>
 <h3 style="font-size:1.5rem; margin-bottom:1rem;">CFO Advisory</h3>
 <p>Virtual and part-time CFO services providing executive-level financial leadership without the burdensome cost of a full-time hire.</p>
 <div style="margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid var(--border);">
 <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.05em;">Key Benefits</h4>
 <ul style="list-style: none;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Board-level strategic guidance and planning</li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Advanced cash-flow modeling and forecasting</li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Turnaround management for distressed assets</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Board-level strategic guidance and planning</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Advanced cash-flow modeling and forecasting</li>
+<li style="margin-bottom:0.75rem; display:flex; align-items:flex-start; gap:0.75rem;"><i class="fa-solid fa-check" style="color:var(--success); margin-top:0.25rem;"></i> Turnaround management for distressed assets</li>
 </ul>
 </div>
 <a class="btn btn-outline btn-block" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More</a>
 </div>
 </div>
 </section>
+<!-- 3. Industries We Serve -->
+<section class="section section-dark">
+<div class="container">
+<div style="text-align:center; margin-bottom: 3rem;">
+<h2 style="color:white;">Industries We Serve</h2>
+<p style="color:#8892B0; max-width:600px; margin:0 auto;">Specialized financial expertise tailored to your specific industry's unique challenges.</p>
+</div>
+<div class="grid-4">
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:white; padding:1.5rem; text-align:center;">
+<i class="fa-solid fa-laptop-code" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h4 style="color:white; margin:0;">Technology</h4>
+</div>
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:white; padding:1.5rem; text-align:center;">
+<i class="fa-solid fa-building" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h4 style="color:white; margin:0;">Real Estate</h4>
+</div>
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:white; padding:1.5rem; text-align:center;">
+<i class="fa-solid fa-stethoscope" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h4 style="color:white; margin:0;">Healthcare</h4>
+</div>
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:white; padding:1.5rem; text-align:center;">
+<i class="fa-solid fa-store" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h4 style="color:white; margin:0;">Retail</h4>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. How We Work -->
+<section class="section section-white">
+<div class="container">
+<div style="text-align:center; margin-bottom: 3rem;">
+<h2>Our Service Process</h2>
+<p style="color:var(--text-light); max-width:600px; margin:0 auto;">A seamless onboarding and execution process designed for minimal disruption.</p>
+</div>
+<div class="timeline">
+<div class="timeline-step">
+<div class="timeline-icon">1</div>
+<h4>Consultation</h4>
+<p style="color:var(--text-light); font-size:0.95rem;">Initial meeting to assess needs.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-icon">2</div>
+<h4>Strategy</h4>
+<p style="color:var(--text-light); font-size:0.95rem;">Custom financial roadmap.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-icon">3</div>
+<h4>Execution</h4>
+<p style="color:var(--text-light); font-size:0.95rem;">Implementing the solution.</p>
+</div>
+<div class="timeline-step">
+<div class="timeline-icon">4</div>
+<h4>Review</h4>
+<p style="color:var(--text-light); font-size:0.95rem;">Ongoing support &amp; reporting.</p>
+</div>
+</div>
+</div>
+</section>
+
 <!-- CTA Section -->
 <section class="section section-white">
-<div class="container" data-aos="zoom-in" style="text-align:center; padding: 5rem 3rem; background:var(--bg-main); border-radius:var(--radius-lg); border:1px solid var(--border);">
+<div class="container" style="text-align:center; padding: 5rem 3rem; background:var(--bg-main); border-radius:var(--radius-lg); border:1px solid var(--border);">
 <h2>Ready to Optimize Your Operations?</h2>
 <p style="margin-bottom:2.5rem; font-size:1.2rem; color:var(--text-light);">Let our experts tailor these services exactly to your business model.</p>
 <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;">
@@ -222,23 +278,23 @@
 <div>
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Services</h4>
 <ul style="list-style:none; padding:0; margin:0; margin-bottom:1.5rem;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Accounting &amp; Bookkeeping</a></li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Tax Planning</a></li>
-<li data-aos="fade-up" data-aos-delay="400" style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Audit &amp; Assurance</a></li>
+<li style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Accounting &amp; Bookkeeping</a></li>
+<li style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Tax Planning</a></li>
+<li style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Audit &amp; Assurance</a></li>
 </ul>
 <h4 style="color:white; margin-bottom:1rem; font-size:1.1rem; letter-spacing:0.05em;">Resources</h4>
 <ul style="list-style:none; padding:0; margin:0;">
-<li data-aos="fade-up" data-aos-delay="100" style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Tax Calculators</a></li>
-<li data-aos="fade-up" data-aos-delay="250" style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Financial Glossary</a></li>
+<li style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Tax Calculators</a></li>
+<li style="margin-bottom:0.75rem;"><a href="404.html" onmouseout="this.style.color='#8892B0'" onmouseover="this.style.color='var(--accent)'" style="color:#8892B0; text-decoration:none; transition:0.2s;">Financial Glossary</a></li>
 </ul>
 </div>
 <!-- Col 4: Contact & Newsletter -->
 <div>
 <h4 style="color:white; margin-bottom:1.5rem; font-size:1.1rem; letter-spacing:0.05em;">Contact Info</h4>
 <ul style="list-style:none; padding:0; margin:0; margin-bottom:1.5rem;">
-<li data-aos="fade-up" data-aos-delay="100" style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-location-dot" style="margin-top:5px; color:var(--accent);"></i>  MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</li>
-<li data-aos="fade-up" data-aos-delay="250" style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i> 9090909090, 8080808080</li>
-<li data-aos="fade-up" data-aos-delay="400" style="display:flex; gap:10px; color:#8892B0; align-items:flex-start;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com, info@stackly.com</li>
+<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-location-dot" style="margin-top:5px; color:var(--accent);"></i>  MMR Complex, Chinna Thirupathi, Near Chinna Muniyappan Kovil, Salem - 636 003</li>
+<li style="display:flex; gap:10px; color:#8892B0; margin-bottom:0.75rem; align-items:flex-start;"><i class="fa-solid fa-phone" style="color:var(--accent);"></i> 9090909090, 8080808080</li>
+<li style="display:flex; gap:10px; color:#8892B0; align-items:flex-start;"><i class="fa-solid fa-envelope" style="color:var(--accent);"></i> contact@stackly.com, info@stackly.com</li>
 </ul>
 <h4 style="color:white; margin-bottom:1rem; font-size:1rem;">Subscribe to Newsletter</h4>
 <form data-success-action="404" novalidate="novalidate" style="display:flex;">
@@ -261,6 +317,6 @@
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Custom JS -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790326473"></script>
 </body>
 </html>

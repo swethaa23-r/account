@@ -14,19 +14,17 @@
 <!-- AOS Animation CSS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 </head>
 <body class="preloader-active">
 
+
 <!-- Preloader -->
 <div id="preloader">
-    <div class="preloader-content">
-        <div class="preloader-logo-wrapper">
-            <div class="preloader-glow"></div>
-            <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo">
-        </div>
-        <div class="preloader-bar-container">
-            <div class="preloader-bar"></div>
+    <div class="premium-preloader">
+        <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo-anim">
+        <div class="preloader-line">
+            <div class="preloader-line-inner"></div>
         </div>
     </div>
 </div>
@@ -35,7 +33,7 @@
 <div class="container nav-container">
 <a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
-<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+<div class="mobile-only-logo" style="margin-bottom: 2rem;">
     <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 </div>
 
@@ -45,7 +43,7 @@
 <a class="active" href="blog.html">Blog</a>
 <a class="" href="contact.html">Contact</a>
 
-<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+<div class="mobile-only-btn" style="margin-top: auto; margin-bottom: 2rem; padding-top: 1rem; width: 100%;">
     <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
 </nav>
@@ -72,8 +70,8 @@
 </div>
 <div class="grid-3">
 <!-- Business -->
-<div class="card" style="padding:0; border:none; overflow:hidden;">
-<img alt="Business" onerror="this.src='images/stackly_img_2.webp'" src="images/stackly_img_20.webp" style="width:100%; height:200px; object-fit:cover;"/>
+<div class="card" data-aos="fade-up" style="padding:0; border:none; overflow:hidden;">
+<img alt="Business" onerror="this.src='images/stackly_img_2.webp'" src="images/business_meeting.webp" style="width:100%; height: 240px; object-fit: cover; object-position: center top;"/>
 <div style="padding:1.5rem; display:flex; flex-direction:column;">
 <span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">Business</span>
 <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Scaling Your Enterprise Effectively</h3>
@@ -82,8 +80,8 @@
 </div>
 </div>
 <!-- Tax -->
-<div class="card" style="padding:0; border:none; overflow:hidden;">
-<img alt="Tax" onerror="this.src='images/stackly_img_2.webp'" src="images/stackly_img_16.webp" style="width:100%; height:200px; object-fit:cover;"/>
+<div class="card" data-aos="fade-up" style="padding:0; border:none; overflow:hidden;">
+<img alt="Tax" onerror="this.src='images/stackly_img_2.webp'" src="images/tax_calculator.webp" style="width:100%; height: 240px; object-fit: cover; object-position: center top;"/>
 <div style="padding:1.5rem; display:flex; flex-direction:column;">
 <span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">Tax</span>
 <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Corporate Tax Optimization</h3>
@@ -92,8 +90,8 @@
 </div>
 </div>
 <!-- Accounting -->
-<div class="card" style="padding:0; border:none; overflow:hidden;">
-<img alt="Accounting" onerror="this.src='images/stackly_img_2.webp'" src="images/stackly_img_15.webp" style="width:100%; height:200px; object-fit:cover;"/>
+<div class="card" data-aos="fade-up" style="padding:0; border:none; overflow:hidden;">
+<img alt="Accounting" onerror="this.src='images/stackly_img_2.webp'" src="images/accounting_ledger.webp" style="width:100%; height: 240px; object-fit: cover; object-position: center top;"/>
 <div style="padding:1.5rem; display:flex; flex-direction:column;">
 <span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">Accounting</span>
 <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">The Future of Cloud Accounting</h3>
@@ -116,7 +114,7 @@
 <button class="btn btn-outline" id="btn-Compliance" onclick="filterCategory('Compliance')" style="padding: 0.5rem 1.25rem; font-size:0.9rem;">Compliance</button>
 </div>
 <div style="flex:0 1 320px; position:relative;">
-<input class="form-control" id="blogSearchInput" onkeyup="searchArticles(this.value)" placeholder="Search articles..." style="padding-left:2.75rem; width:100%; border-radius:99px;" type="text"/>
+<input class="form-control" id="blogSearchInput" onkeyup="searchArticles(event)" placeholder="Search articles..." style="padding-left:2.75rem; width:100%; border-radius:99px;" type="text"/>
 <i class="fa-solid fa-search" style="position:absolute; left:1.25rem; top:50%; transform:translateY(-50%); color:var(--text-light);"></i>
 </div>
 </div>
@@ -129,16 +127,80 @@
 <div id="pagination" style="display:flex; justify-content:center; gap:0.5rem; margin-top:3rem;"></div>
 </div>
 </section>
+<!-- Additional Section 1: Upcoming Webinars -->
+<section class="section section-white">
+<div class="container">
+<div style="text-align:center; margin-bottom: 3rem;">
+<h2>Upcoming Webinars</h2>
+<p style="color:var(--text-light); max-width:600px; margin:0 auto;">Join our live sessions with financial experts.</p>
+</div>
+<div class="grid-2">
+<div class="card" data-aos="fade-up" style="display:flex; gap:1.5rem; align-items:center;">
+<div style="width:80px; height:80px; background:var(--accent); color:white; border-radius:var(--radius); display:flex; flex-direction:column; align-items:center; justify-content:center; flex-shrink:0;">
+<span style="font-size:1.5rem; font-weight:700;">24</span>
+<span style="font-size:0.85rem; text-transform:uppercase;">Oct</span>
+</div>
+<div>
+<h4 style="margin:0 0 0.5rem 0; font-size:1.25rem;">Tax Optimization for Q4</h4>
+<p style="margin:0; color:var(--text-light); font-size:0.95rem;">Learn how to prepare your business for year-end tax planning.</p>
+<a href="404.html" style="font-size:0.9rem; font-weight:600; margin-top:0.5rem; display:inline-block;">Register Now <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="card" data-aos="fade-up" style="display:flex; gap:1.5rem; align-items:center;">
+<div style="width:80px; height:80px; background:var(--accent); color:white; border-radius:var(--radius); display:flex; flex-direction:column; align-items:center; justify-content:center; flex-shrink:0;">
+<span style="font-size:1.5rem; font-weight:700;">05</span>
+<span style="font-size:0.85rem; text-transform:uppercase;">Nov</span>
+</div>
+<div>
+<h4 style="margin:0 0 0.5rem 0; font-size:1.25rem;">Global Accounting Standards</h4>
+<p style="margin:0; color:var(--text-light); font-size:0.95rem;">Navigating compliance across international markets.</p>
+<a href="404.html" style="font-size:0.9rem; font-weight:600; margin-top:0.5rem; display:inline-block;">Register Now <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Additional Section 2: Financial Resources -->
+<section class="section section-light">
+<div class="container">
+<div style="text-align:center; margin-bottom: 3rem;">
+<h2>Downloadable Resources</h2>
+<p style="color:var(--text-light); max-width:600px; margin:0 auto;">Free tools and guides to help you manage your finances.</p>
+</div>
+<div class="grid-3">
+<div class="card" data-aos="fade-up" style="text-align:center;">
+<i class="fa-solid fa-file-pdf" style="font-size:2.5rem; color:var(--error); margin-bottom:1rem;"></i>
+<h4>2026 Tax Guide</h4>
+<p style="color:var(--text-light); font-size:0.95rem;">Comprehensive guide to corporate tax changes.</p>
+<a class="btn btn-outline" href="404.html" style="margin-top:1rem;">Download PDF</a>
+</div>
+<div class="card" data-aos="fade-up" style="text-align:center;">
+<i class="fa-solid fa-file-excel" style="font-size:2.5rem; color:var(--success); margin-bottom:1rem;"></i>
+<h4>Expense Tracker</h4>
+<p style="color:var(--text-light); font-size:0.95rem;">Automated spreadsheet for tracking daily expenses.</p>
+<a class="btn btn-outline" href="404.html" style="margin-top:1rem;">Download Excel</a>
+</div>
+<div class="card" data-aos="fade-up" style="text-align:center;">
+<i class="fa-solid fa-file-pdf" style="font-size:2.5rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h4>Audit Checklist</h4>
+<p style="color:var(--text-light); font-size:0.95rem;">Prepare your business for a seamless internal audit.</p>
+<a class="btn btn-outline" href="404.html" style="margin-top:1rem;">Download PDF</a>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Newsletter / CTA -->
 <section class="section section-primary" style="background:var(--primary); padding:4rem 0; margin-top:2rem;">
 <div class="container">
-<div class="bg-animated" data-aos="zoom-in" style="padding: 3rem; border-radius:var(--radius-lg); display:flex; flex-wrap:wrap; align-items:center; gap:3rem;">
+<div class="bg-animated" style="padding: 3rem; border-radius:var(--radius-lg); display:flex; flex-wrap:wrap; align-items:center; gap:3rem;">
 <div style="flex:1 1 400px; color:white;">
 <h2 style="color:white; margin-bottom:1rem; font-size:2.5rem;">Subscribe to Our Newsletter</h2>
 <p style="font-size:1.15rem; color:rgba(255,255,255,0.9); margin:0; line-height:1.6;">Get the latest financial insights, tax updates, and business strategies delivered straight to your inbox every week.</p>
 </div>
 <div style="flex:1 1 400px;">
-<form data-success-action="404" novalidate="novalidate" style="display:flex; gap:0.5rem; background:white; padding:0.5rem; border-radius:99px;">
+<form data-success-action="404" novalidate="novalidate" class="newsletter-form">
 <input data-custom-required="true" id="dynamicField_blog_newsletter_1" placeholder="Enter your email address..." style="flex:1; border:none; padding:1rem 1.5rem; outline:none; font-family:inherit; font-size:1rem; border-radius:99px; color:var(--primary);" type="email"/>
 
 <button class="btn btn-primary" style="white-space:nowrap; border-radius:99px; padding: 0.75rem 2rem;" type="submit">Subscribe Now</button>
@@ -209,37 +271,32 @@
 <!-- JS Engine -->
 <script>
     const articles = [
-    { category: 'Accounting', title: 'Accounting Insight #1', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_1.webp' },
-    { category: 'Accounting', title: 'Accounting Insight #2', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_2.webp' },
-    { category: 'Accounting', title: 'Accounting Insight #3', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_3.webp' },
-    { category: 'Accounting', title: 'Accounting Insight #4', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/stackly_img_4.webp' },
-    { category: 'Tax', title: 'Tax Insight #5', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_5.webp' },
-    { category: 'Tax', title: 'Tax Insight #6', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_6.webp' },
-    { category: 'Tax', title: 'Tax Insight #7', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_7.webp' },
-    { category: 'Tax', title: 'Tax Insight #8', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/stackly_img_8.webp' },
-    { category: 'Business', title: 'Business Insight #9', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_9.webp' },
-    { category: 'Business', title: 'Business Insight #10', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_10.webp' },
-    { category: 'Business', title: 'Business Insight #11', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_11.webp' },
-    { category: 'Business', title: 'Business Insight #12', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/stackly_img_12.webp' },
-    { category: 'Finance', title: 'Finance Insight #13', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/stackly_img_13.webp' },
-    { category: 'Finance', title: 'Finance Insight #14', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/stackly_img_14.webp' },
-    { category: 'Finance', title: 'Finance Insight #15', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/stackly_img_21.webp' },
-    { category: 'Compliance', title: 'Compliance Insight #16', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_img_23.webp' },
-    { category: 'Compliance', title: 'Compliance Insight #17', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_img_24.webp' },
-    { category: 'Compliance', title: 'Compliance Insight #18', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_img_27.webp' },
+    { id: 1, category: 'Accounting', title: 'Accounting Insight #1', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/accounting_ledger.webp' },
+    { id: 2, category: 'Accounting', title: 'Accounting Insight #2', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/accounting_calculator.webp' },
+    { id: 3, category: 'Accounting', title: 'Accounting Insight #3', desc: 'Deep dive into the latest strategies and news concerning accounting.', img: 'images/accounting_balance_sheet.webp' },
+    { id: 4, category: 'Tax', title: 'Tax Insight #4', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/tax_calculator.webp' },
+    { id: 5, category: 'Tax', title: 'Tax Insight #5', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/tax_forms.webp' },
+    { id: 6, category: 'Tax', title: 'Tax Insight #6', desc: 'Deep dive into the latest strategies and news concerning tax.', img: 'images/tax_folders.webp' },
+    { id: 7, category: 'Business', title: 'Business Insight #7', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/business_charts.webp' },
+    { id: 8, category: 'Business', title: 'Business Insight #8', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/business_meeting.webp' },
+    { id: 9, category: 'Business', title: 'Business Insight #9', desc: 'Deep dive into the latest strategies and news concerning business.', img: 'images/business_strategy.webp' },
+    { id: 10, category: 'Finance', title: 'Finance Insight #10', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/finance_growth.webp' },
+    { id: 11, category: 'Finance', title: 'Finance Insight #11', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/finance_dashboard.webp' },
+    { id: 12, category: 'Finance', title: 'Finance Insight #12', desc: 'Deep dive into the latest strategies and news concerning finance.', img: 'images/finance_coins.webp' },
+    { id: 13, category: 'Compliance', title: 'Compliance Insight #13', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/compliance_checklist.webp' },
+    { id: 14, category: 'Compliance', title: 'Compliance Insight #14', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_unique_2.webp' },
+    { id: 15, category: 'Compliance', title: 'Compliance Insight #15', desc: 'Deep dive into the latest strategies and news concerning compliance.', img: 'images/stackly_unique_3.webp' }
 ];
 
-function shuffle(array) {
-        let currentIndex = array.length,  randomIndex;
-        while (currentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-        }
-        return array;
-    }
-    
-    const mixedArticles = shuffle([...articles]);
+    // For the "All" tab when not searching, show 6 specific items
+    const defaultAllArticles = [
+        articles.find(a => a.id === 1), // Accounting
+        articles.find(a => a.id === 7), // Business
+        articles.find(a => a.id === 8), // Business
+        articles.find(a => a.id === 4), // Tax
+        articles.find(a => a.id === 10), // Finance
+        articles.find(a => a.id === 13)  // Compliance
+    ];
 
     let currentCategory = 'All';
     let currentSearch = '';
@@ -251,17 +308,29 @@ function shuffle(array) {
         const noRes = document.getElementById('noResults');
         const pag = document.getElementById('pagination');
         
-        let dataToFilter = currentCategory === 'All' ? mixedArticles : articles;
+        let dataToFilter = [];
         
+        // If Category is 'All' and NO search is active, show the default 6 items
+        if (currentCategory === 'All' && currentSearch.trim() === '') {
+            dataToFilter = defaultAllArticles;
+        } else if (currentCategory === 'All' && currentSearch.trim() !== '') {
+            dataToFilter = articles; // search across all
+        } else {
+            // Specific category
+            dataToFilter = articles.filter(a => a.category === currentCategory);
+        }
+        
+        // Apply search filter
         let filtered = dataToFilter.filter(a => {
-            let catMatch = (currentCategory === 'All') || (a.category === currentCategory);
             let searchMatch = a.title.toLowerCase().includes(currentSearch.toLowerCase()) || a.desc.toLowerCase().includes(currentSearch.toLowerCase());
-            return catMatch && searchMatch;
+            return searchMatch;
         });
 
+        // Do not redirect to 404 here! Instead show local empty state.
         if (filtered.length === 0) {
-            window.location.href = '404.html';
-            return;
+            grid.style.display = 'none';
+            pag.style.display = 'none';
+            noRes.style.display = 'block';
         } else {
             grid.style.display = 'grid';
             pag.style.display = 'flex';
@@ -280,7 +349,7 @@ function shuffle(array) {
             card.className = 'card';
             card.style = 'padding:0; border:none; overflow:hidden; display:flex; flex-direction:column;';
             card.innerHTML = `
-                <img src="${article.img}" alt="${article.title}" style="width:100%; height:200px; object-fit:cover;" onerror="this.src='images/stackly_img_2.webp'">
+                <img src="${article.img}" alt="${article.title}" style="width:100%; height: 240px; object-fit: cover; object-position: center top;" onerror="this.src='images/stackly_img_2.webp'">
                 <div style="padding: 1.5rem; display:flex; flex-direction:column; flex:1;">
                     <span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent); align-self:flex-start; padding:4px 12px; border-radius:99px; font-weight:600; font-size:0.85rem; margin-bottom:1rem;">${article.category}</span>
                     <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">${article.title}</h3>
@@ -312,6 +381,8 @@ function shuffle(array) {
     function filterCategory(cat) {
         currentCategory = cat;
         currentPage = 1;
+        document.getElementById('blogSearchInput').value = ''; // clear search on category change
+        currentSearch = '';
         
         const buttons = document.querySelectorAll('section[style*="position:sticky"] button');
         buttons.forEach(b => {
@@ -324,10 +395,20 @@ function shuffle(array) {
         renderGrid();
     }
 
-    function searchArticles(val) {
-        currentSearch = val;
+    function searchArticles(event) {
+        currentSearch = event.target.value;
         currentPage = 1;
         renderGrid();
+        
+        // Only redirect to 404 when Enter is pressed and there are NO results
+        if (event.key === 'Enter') {
+            let dataToFilter = currentCategory === 'All' ? articles : articles.filter(a => a.category === currentCategory);
+            let filtered = dataToFilter.filter(a => a.title.toLowerCase().includes(currentSearch.toLowerCase()) || a.desc.toLowerCase().includes(currentSearch.toLowerCase()));
+            
+            if (filtered.length === 0) {
+                window.location.href = '404.html';
+            }
+        }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -337,6 +418,6 @@ function shuffle(array) {
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Custom JS -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790326473"></script>
 </body>
 </html>

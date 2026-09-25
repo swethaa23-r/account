@@ -8,24 +8,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 </head>
 <body class="auth-page preloader-active">
 
 <!-- Preloader -->
 <div id="preloader">
-    <div class="preloader-content">
-        <div class="preloader-logo-wrapper">
-            <div class="preloader-glow"></div>
-            <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo">
-        </div>
-        <div class="preloader-bar-container">
-            <div class="preloader-bar"></div>
+    <div class="premium-preloader">
+        <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo-anim">
+        <div class="preloader-line">
+            <div class="preloader-line-inner"></div>
         </div>
     </div>
 </div>
 
-<div class="auth-card" data-aos="zoom-in">
+<div style="position: absolute; top: 20px; left: 20px;">
+    <a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem; border-color: var(--border); background: white;"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+</div>
+<div class="auth-card">
 <div class="auth-header">
 <a class="logo" href="index.html" style="justify-content:center;"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <h2 style="margin-top:0.5rem; margin-bottom:0.25rem; font-size:1.5rem;">Welcome Back</h2>
@@ -34,12 +34,12 @@
 <form data-success-action="login_success" id="proLoginForm" novalidate="novalidate">
 <div class="form-group">
 <label class="form-label" for="loginEmail">Email Address</label>
-<input class="form-control" id="loginEmail" data-custom-required="true" placeholder="name@company.com" type="email"/>
+<input class="form-control" id="loginEmail" autocomplete="email" data-custom-required="true" placeholder="name@company.com" type="email"/>
 </div>
 <div class="form-group">
 <label class="form-label" for="loginPassword">Password</label>
 <div style="position:relative;">
-<input class="form-control" id="loginPassword" type="password" placeholder="Enter password" data-custom-required="true" />
+<input class="form-control" id="loginPassword" autocomplete="current-password" type="password" placeholder="Enter password" data-custom-required="true" />
 <i class="fa-solid fa-eye" id="togglePassword" style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer; color:var(--text-light);"></i>
 </div>
 </div>
@@ -50,7 +50,7 @@
 <option value="admin">Admin Dashboard</option>
 </select>
 </div>
-<div style="display:flex; flex-direction:column; gap:0.25rem; align-items:flex-start; margin-bottom:1rem; font-size:0.85rem; width:100%;">
+<div style="display:flex; flex-direction:column; gap:0.25rem; align-items:center; margin-bottom:1rem; font-size:0.85rem; width:100%; text-align:center;">
 <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; color:var(--text-main);">
 <input id="dynamicField_login_1" style="width:16px; height:16px; accent-color:var(--accent);" type="checkbox"/> Remember me
                 </label>
@@ -63,6 +63,6 @@
 </p>
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790326473"></script>
 <script>document.getElementById('togglePassword').addEventListener('click', function() { const pw = document.getElementById('loginPassword'); const type = pw.getAttribute('type') === 'password' ? 'text' : 'password'; pw.setAttribute('type', type); this.classList.toggle('fa-eye-slash'); });</script></body>
 </html>

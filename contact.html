@@ -14,29 +14,25 @@
 <!-- AOS Animation CSS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 </head>
 <body class="preloader-active">
 
+
 <!-- Preloader -->
 <div id="preloader">
-    <div class="preloader-content">
-        <div class="preloader-logo-wrapper">
-            <div class="preloader-glow"></div>
-            <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo">
-        </div>
-        <div class="preloader-bar-container">
-            <div class="preloader-bar"></div>
+    <div class="premium-preloader">
+        <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo-anim">
+        <div class="preloader-line">
+            <div class="preloader-line-inner"></div>
         </div>
     </div>
-</div>
-
-<!-- Header / Navbar -->
+</div><!-- Header / Navbar -->
 <header class="navbar">
 <div class="container nav-container">
 <a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
-<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+<div class="mobile-only-logo" style="margin-bottom: 2rem;">
     <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 </div>
 
@@ -46,7 +42,7 @@
 <a class="" href="blog.html">Blog</a>
 <a class="active" href="contact.html">Contact</a>
 
-<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+<div class="mobile-only-btn" style="margin-top: auto; margin-bottom: 2rem; padding-top: 1rem; width: 100%;">
     <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
 </nav>
@@ -59,7 +55,7 @@
 <main>
 <!-- Hero -->
 <section class="hero" style="min-height: 40vh; padding-top: 10rem; background-color: var(--bg-white); background-image: radial-gradient(var(--border) 1px, transparent 1px); background-size: 40px 40px; display: flex; align-items: center;">
-<div class="container" data-aos="fade-up" style="text-align:center;">
+<div class="container" style="text-align:center;">
 <h1 style="font-size:4rem; margin-bottom:1rem;">Contact Us</h1>
 <p style="max-width: 600px; margin: 0 auto; font-size: 1.25rem; color:var(--text-light);">Get in touch with our financial experts to discuss how we can help your business thrive.</p>
 </div>
@@ -68,7 +64,7 @@
 <section class="section section-light">
 <div class="container grid-2" style="align-items:flex-start; gap:6rem;">
 <!-- Left: Info -->
-<div data-aos="fade-right">
+<div>
 <h2 style="font-size:2.5rem;">Our Office</h2>
 <p style="margin-bottom:3rem; color:var(--text-light); font-size:1.1rem; line-height:1.7;">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start;">
@@ -107,7 +103,7 @@
 </div>
 </div>
 <!-- Right: Form -->
-<div class="card" data-aos="fade-left" style="padding: 3.5rem;">
+<div class="card" data-aos="fade-up" style="padding: 3.5rem;">
 <h3 style="margin-bottom:2rem; font-size:1.75rem;">Send a Message</h3>
 <!-- Success Message Block -->
 <div id="contactSuccess" style="display:none; padding:1.5rem; background:rgba(16,185,129,0.1); color:#059669; border-radius:var(--radius); margin-bottom:2rem; border:1px solid rgba(16,185,129,0.3);">
@@ -121,7 +117,7 @@
 </div>
 <!-- Form -->
 <form data-success-action="contact_success" id="proContactForm" novalidate="novalidate">
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+<div class="grid-form-2">
 <div class="form-group" style="margin:0;">
 <label class="form-label" for="cName">Full Name <span style="color:var(--error);">*</span></label>
 <input class="form-control" data-custom-required="true" id="cName" placeholder="John Doe" type="text"/>
@@ -131,19 +127,19 @@
 <input class="form-control" id="cCompany" placeholder="Acme Corp" type="text"/>
 </div>
 </div>
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:1.5rem;">
+<div style="display:flex; flex-direction:column; gap:1.5rem; margin-top:1.5rem;">
 <div class="form-group" style="margin:0;">
 <label class="form-label" for="cEmail">Email Address <span style="color:var(--error);">*</span></label>
-<input class="form-control" data-custom-required="true" id="cEmail" placeholder="john@example.com" type="text"/>
+<input class="form-control" data-custom-required="true" id="cEmail" placeholder="john@example.com" type="email"/>
 </div>
 <div class="form-group" style="margin:0;">
 <label class="form-label" for="cPhone">Phone Number <span style="color:var(--error);">*</span></label>
-<input class="form-control" data-custom-required="true" id="cPhone" placeholder="+1 (555) 000-0000" type="text"/>
+<input class="form-control" data-custom-required="true" id="cPhone" placeholder="+1 (555) 000-0000" type="tel"/>
 </div>
 </div>
 <div class="form-group" style="margin-top:1.5rem;">
 <label class="form-label" for="cService">Service Required <span style="color:var(--error);">*</span></label>
-<select class="form-control" id="cService">
+<select class="form-control" id="cService" data-custom-required="true">
 <option value="">Select a service...</option>
 <option value="Accounting &amp; Bookkeeping">Accounting &amp; Bookkeeping</option>
 <option value="Tax Services">Tax Services</option>
@@ -166,13 +162,49 @@
 </section>
 <!-- Map Section -->
 <section class="section section-light" style="padding-top:0;">
-<div class="container" data-aos="fade-up">
+<div class="container">
 <div style="width:100%; height:450px; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg); position:relative; border:1px solid var(--border);">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125055.22822453629!2d78.07722744883908!3d11.653733075677897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babce5e3ef22239%3A0x6338fb2430032b4b!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
   </div>
   </div>
   </section>
+<!-- FAQ Section -->
+<section class="section section-white">
+<div class="container">
+<div style="text-align:center; margin-bottom: 3rem;">
+<h2>Frequently Asked Questions</h2>
+<p style="color:var(--text-light); max-width:600px; margin:0 auto;">Find answers to common questions about our services and processes.</p>
+</div>
+<div class="grid-2">
+<div class="card" data-aos="fade-up" style="padding:2rem;">
+<h4>What industries do you serve?</h4>
+<p style="color:var(--text-light); margin-bottom:0;">We serve a wide variety of industries including retail, healthcare, technology, and manufacturing.</p>
+</div>
+<div class="card" data-aos="fade-up" style="padding:2rem;">
+<h4>How do I get started?</h4>
+<p style="color:var(--text-light); margin-bottom:0;">Simply fill out the contact form above, and one of our experts will reach out to schedule an initial consultation.</p>
+</div>
+<div class="card" data-aos="fade-up" style="padding:2rem;">
+<h4>Do you offer remote accounting services?</h4>
+<p style="color:var(--text-light); margin-bottom:0;">Yes, we use cloud-based platforms to seamlessly manage your finances remotely from anywhere.</p>
+</div>
+<div class="card" data-aos="fade-up" style="padding:2rem;">
+<h4>What are your fees?</h4>
+<p style="color:var(--text-light); margin-bottom:0;">Our fees depend on the complexity of your needs. We provide a transparent quote after the initial consultation.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Additional Section: Support Center -->
+<section class="section section-dark">
+<div class="container text-center" style="text-align:center;">
+<h2 style="color:white; margin-bottom:1rem;">Need Immediate Support?</h2>
+<p style="color:#8892B0; max-width:600px; margin:0 auto 2rem auto;">Our dedicated support team is available 24/7 for urgent financial inquiries.</p>
+<a class="btn btn-primary" href="tel:9090909090"><i class="fa-solid fa-phone-volume"></i> Call Support Now</a>
+</div>
+</section>
 </main>
 <!-- Footer -->
 <footer class="footer" style="background-color: #0A192F; color: white; padding-top: 2rem;">
@@ -235,6 +267,6 @@
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Custom JS -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790326473"></script>
 </body>
 </html>

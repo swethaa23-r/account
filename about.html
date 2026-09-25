@@ -14,29 +14,25 @@
 <!-- AOS Animation CSS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 </head>
 <body class="preloader-active">
 
+
 <!-- Preloader -->
 <div id="preloader">
-    <div class="preloader-content">
-        <div class="preloader-logo-wrapper">
-            <div class="preloader-glow"></div>
-            <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo">
-        </div>
-        <div class="preloader-bar-container">
-            <div class="preloader-bar"></div>
+    <div class="premium-preloader">
+        <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo-anim">
+        <div class="preloader-line">
+            <div class="preloader-line-inner"></div>
         </div>
     </div>
-</div>
-
-<!-- Header / Navbar -->
+</div><!-- Header / Navbar -->
 <header class="navbar">
 <div class="container nav-container">
 <a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
-<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+<div class="mobile-only-logo" style="margin-bottom: 2rem;">
     <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 </div>
 
@@ -46,7 +42,7 @@
 <a class="" href="blog.html">Blog</a>
 <a class="" href="contact.html">Contact</a>
 
-<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+<div class="mobile-only-btn" style="margin-top: auto; margin-bottom: 2rem; padding-top: 1rem; width: 100%;">
     <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
 </nav>
@@ -59,7 +55,7 @@
 <main>
 <!-- 1. Hero -->
 <section class="hero" style="min-height: 50vh; padding-top: 10rem;">
-<div class="container" data-aos="fade-up" style="text-align:center;">
+<div class="container" style="text-align:center;">
 <h1>About Stackly</h1>
 <p style="max-width: 600px; margin: 0 auto; font-size: 1.25rem;">We are a premium accounting firm dedicated to delivering exceptional financial clarity.</p>
 </div>
@@ -67,10 +63,10 @@
 <!-- 2. Company Story (Image Left, Text Right) -->
 <section class="section section-white">
 <div class="container grid-2">
-<div data-aos="fade-right">
+<div>
 <img alt="Our Office" loading="lazy" src="images/stackly_img_1.webp" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"/>
 </div>
-<div data-aos="fade-left">
+<div>
 <span class="badge badge-success" style="margin-bottom:1rem; display:inline-block;">Our Story</span>
 <h2>Building Financial Trust Since 2016</h2>
 <p>Founded with the vision of modernizing financial consulting, Stackly has grown into a trusted partner for businesses nationwide.</p>
@@ -81,7 +77,7 @@
 <!-- 3. Mission & Vision (Text Left, Image Right) -->
 <section class="section section-light">
 <div class="container grid-2">
-<div data-aos="fade-right">
+<div>
 <span class="badge badge-warning" style="margin-bottom:1rem; display:inline-block;">Our Purpose</span>
 <h2>Mission &amp; Vision</h2>
 <div style="margin-bottom: 2rem;">
@@ -93,7 +89,7 @@
 <p>To be the most trusted financial consultancy brand, setting the industry standard for accuracy, integrity, and modern accounting intelligence.</p>
 </div>
 </div>
-<div data-aos="fade-left">
+<div>
 <img alt="Vision Strategy" loading="lazy" src="images/stackly_img_2.webp" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"/>
 </div>
 </div>
@@ -101,27 +97,27 @@
 <!-- 4. Core Values -->
 <section class="section section-dark">
 <div class="container">
-<div data-aos="fade-up" style="text-align:center; margin-bottom: 2rem;">
+<div style="text-align:center; margin-bottom: 2rem;">
 <h2>Our Core Values</h2>
 <p style="max-width:600px; margin:0 auto;">The principles that guide every ledger we balance and strategy we build.</p>
 </div>
 <div class="grid-4">
-<div class="card" data-aos="fade-up" data-aos-delay="100" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
 <i class="shake-target fa-solid fa-scale-balanced" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
 <h3 style="color:white; font-size:1.2rem;">Integrity First</h3>
 <p style="color:#8892B0; margin:0; font-size:0.95rem;">Uncompromising ethical standards in all our reporting and advisory.</p>
 </div>
-<div class="card" data-aos="fade-up" data-aos-delay="200" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
 <i class="shake-target fa-solid fa-crosshairs" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
 <h3 style="color:white; font-size:1.2rem;">Precision</h3>
 <p style="color:#8892B0; margin:0; font-size:0.95rem;">Flawless execution and meticulous attention to every numerical detail.</p>
 </div>
-<div class="card" data-aos="fade-up" data-aos-delay="300" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
 <i class="shake-target fa-solid fa-handshake-angle" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
 <h3 style="color:white; font-size:1.2rem;">Client Success</h3>
 <p style="color:#8892B0; margin:0; font-size:0.95rem;">Your financial growth and security are the true measures of our success.</p>
 </div>
-<div class="card" data-aos="fade-up" data-aos-delay="400" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
+<div class="card" data-aos="fade-up" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
 <i class="shake-target fa-solid fa-lightbulb" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
 <h3 style="color:white; font-size:1.2rem;">Innovation</h3>
 <p style="color:#8892B0; margin:0; font-size:0.95rem;">Leveraging modern technology to deliver smarter, faster accounting solutions.</p>
@@ -132,14 +128,14 @@
 <!-- 5. Why Clients Trust Us (Image Left, Text Right) -->
 <section class="section section-white">
 <div class="container grid-2">
-<div data-aos="fade-right">
+<div>
 <img alt="Client Trust" loading="lazy" src="images/stackly_img_3.webp" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"/>
 </div>
 <div>
-<h2 data-aos="fade-left">Why Clients Trust Us</h2>
-<p data-aos="fade-left" data-aos-delay="100">We don't just crunch numbers; we provide peace of mind. Our approach is built on absolute transparency and rigorous defense of your assets.</p>
+<h2>Why Clients Trust Us</h2>
+<p>We don't just crunch numbers; we provide peace of mind. Our approach is built on absolute transparency and rigorous defense of your assets.</p>
 <ul style="list-style:none; margin-top:2rem;">
-<li data-aos="fade-left" data-aos-delay="200" style="margin-bottom:1.5rem; display:flex; gap:1.5rem; align-items:flex-start;">
+<li style="margin-bottom:1.5rem; display:flex; gap:1.5rem; align-items:flex-start;">
 <div style="width:40px; height: 70px; background:rgba(0,102,255,0.1); color:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <i class="fa-solid fa-lock"></i>
 </div>
@@ -148,7 +144,7 @@
 <p style="margin:0; font-size:0.95rem; color:var(--text-light);">We utilize enterprise-grade encryption to protect all your sensitive financial data.</p>
 </div>
 </li>
-<li data-aos="fade-left" data-aos-delay="300" style="margin-bottom:1.5rem; display:flex; gap:1.5rem; align-items:flex-start;">
+<li style="margin-bottom:1.5rem; display:flex; gap:1.5rem; align-items:flex-start;">
 <div style="width:40px; height: 70px; background:rgba(0,102,255,0.1); color:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <i class="fa-solid fa-file-shield"></i>
 </div>
@@ -157,7 +153,7 @@
 <p style="margin:0; font-size:0.95rem; color:var(--text-light);">Every ledger is maintained to the highest regulatory standards, keeping you prepared.</p>
 </div>
 </li>
-<li data-aos="fade-left" data-aos-delay="400" style="margin-bottom:1.5rem; display:flex; gap:1.5rem; align-items:flex-start;">
+<li style="margin-bottom:1.5rem; display:flex; gap:1.5rem; align-items:flex-start;">
 <div style="width:40px; height: 70px; background:rgba(0,102,255,0.1); color:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <i class="fa-solid fa-comments"></i>
 </div>
@@ -173,13 +169,13 @@
 <!-- 6. Team / Financial Experts -->
 <section class="section section-light">
 <div class="container">
-<div data-aos="fade-up" style="text-align:center; margin-bottom: 2rem;">
+<div style="text-align:center; margin-bottom: 2rem;">
 <h2>Meet Our Financial Experts</h2>
 <p style="max-width:600px; margin:0 auto; color:var(--text-light);">The brilliant minds protecting your assets and strategizing your growth.</p>
 </div>
 <div class="grid-4">
 <!-- Team Member 1 -->
-<div class="card" data-aos="fade-up" data-aos-delay="100" style="padding:0; text-align:center; border:none;">
+<div class="card" data-aos="fade-up" style="padding:0; text-align:center; border:none;">
 <img alt="Michael Anderson" loading="lazy" src="images/stackly_img_4.webp" style="width:100%; height:250px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
 <div style="padding:2rem;">
 <h3 style="margin-bottom:0.25rem; font-size:1.2rem;">Michael Anderson</h3>
@@ -191,7 +187,7 @@
 </div>
 </div>
 <!-- Team Member 2 -->
-<div class="card" data-aos="fade-up" data-aos-delay="200" style="padding:0; text-align:center; border:none;">
+<div class="card" data-aos="fade-up" style="padding:0; text-align:center; border:none;">
 <img alt="Sarah Mitchell" loading="lazy" src="images/stackly_img_5.webp" style="width:100%; height:250px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
 <div style="padding:2rem;">
 <h3 style="margin-bottom:0.25rem; font-size:1.2rem;">Sarah Mitchell</h3>
@@ -203,7 +199,7 @@
 </div>
 </div>
 <!-- Team Member 3 -->
-<div class="card" data-aos="fade-up" data-aos-delay="300" style="padding:0; text-align:center; border:none;">
+<div class="card" data-aos="fade-up" style="padding:0; text-align:center; border:none;">
 <img alt="James Carter" loading="lazy" src="images/stackly_img_6.webp" style="width:100%; height:250px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
 <div style="padding:2rem;">
 <h3 style="margin-bottom:0.25rem; font-size:1.2rem;">James Carter</h3>
@@ -215,7 +211,7 @@
 </div>
 </div>
 <!-- Team Member 4 -->
-<div class="card" data-aos="fade-up" data-aos-delay="400" style="padding:0; text-align:center; border:none;">
+<div class="card" data-aos="fade-up" style="padding:0; text-align:center; border:none;">
 <img alt="Emily Davis" loading="lazy" src="images/stackly_img_7.webp" style="width:100%; height:250px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
 <div style="padding:2rem;">
 <h3 style="margin-bottom:0.25rem; font-size:1.2rem;">Emily Davis</h3>
@@ -231,7 +227,7 @@
 </section>
 <!-- 7. Company Statistics -->
 <section class="section section-white">
-<div class="container grid-4" data-aos="fade-up">
+<div class="container grid-4">
 <div class="stat-item">
 <h2 data-target="2.5">$2.5B+</h2>
 <p>Assets Advised</p>
@@ -250,10 +246,37 @@
 </div>
 </div>
 </section>
-<!-- 8. CTA -->
+<!-- 8. Our Approach -->
+<section class="section section-light">
+<div class="container">
+<div style="text-align:center; margin-bottom: 2rem;">
+<h2>Our Approach</h2>
+<p style="max-width:600px; margin:0 auto; color:var(--text-light);">We combine traditional financial wisdom with modern technology to deliver the best results.</p>
+</div>
+<div class="grid-3">
+<div class="card" data-aos="fade-up" style="text-align:center;">
+<i class="fa-solid fa-chart-line" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h3>Data-Driven</h3>
+<p style="color:var(--text-light); font-size:0.95rem;">Every piece of advice we provide is backed by hard numbers and thorough market analysis.</p>
+</div>
+<div class="card" data-aos="fade-up" style="text-align:center;">
+<i class="fa-solid fa-users" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h3>Client-Centric</h3>
+<p style="color:var(--text-light); font-size:0.95rem;">Your unique business goals form the foundation of our entire financial strategy.</p>
+</div>
+<div class="card" data-aos="fade-up" style="text-align:center;">
+<i class="fa-solid fa-shield-halved" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
+<h3>Risk Management</h3>
+<p style="color:var(--text-light); font-size:0.95rem;">We proactively identify and mitigate financial risks before they impact your bottom line.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 9. CTA -->
 <section class="section">
 <div class="container">
-<div class="bg-animated" data-aos="zoom-in" style="text-align:center; padding: 6rem 3rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
+<div class="bg-animated" style="text-align:center; padding: 6rem 3rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
 <h2 style="color:white;">Ready to Work With the Best?</h2>
 <p style="margin-bottom:3rem; font-size:1.2rem; max-width:600px; margin-left:auto; margin-right:auto; color:rgba(255,255,255,0.9);">Join the leading businesses that trust Stackly for their accounting and advisory needs.</p>
 <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;">
@@ -325,6 +348,6 @@
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Custom JS -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790326473"></script>
 </body>
 </html>

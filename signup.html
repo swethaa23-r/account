@@ -8,10 +8,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 </head>
 <body class="auth-page">
-<div class="auth-card" data-aos="zoom-in" style="max-width: 550px;">
+<div class="auth-card" style="max-width: 550px;">
 <div class="auth-header">
 <a class="logo" href="index.html" style="justify-content:center;"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <h2 style="margin-top:0.5rem; margin-bottom:0.25rem; font-size:1.5rem;">Create an Account</h2>
@@ -26,11 +26,11 @@
 <form id="proSignupForm" novalidate="novalidate">
 <div class="form-group">
 <label class="form-label" for="sName">Full Name</label>
-<input class="form-control" id="sName" data-custom-required="true" placeholder="John Doe" type="text"/>
+<input class="form-control" id="sName" autocomplete="name" data-custom-required="true" placeholder="John Doe" type="text"/>
 </div>
 <div class="form-group">
 <label class="form-label" for="sEmail">Email ID</label>
-<input class="form-control" id="sEmail" data-custom-required="true" placeholder="john@example.com" type="email"/>
+<input class="form-control" id="sEmail" autocomplete="email" data-custom-required="true" placeholder="john@example.com" type="email"/>
 </div>
 <div class="form-group">
 <label class="form-label" for="sRole">Select Role</label>
@@ -39,18 +39,18 @@
 <option value="admin">Admin</option>
 </select>
 </div>
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+<div class="grid-form-2">
 <div class="form-group">
 <label class="form-label" for="sPassword">Password</label>
 <div style="position:relative;">
-<input class="form-control" id="sPassword" type="password" placeholder="Enter password" data-custom-required="true" />
+<input class="form-control" id="sPassword" autocomplete="new-password" type="password" placeholder="Enter password" data-custom-required="true" />
 <i class="fa-solid fa-eye" id="toggleSPassword" style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer; color:var(--text-light);" onclick="const pw = document.getElementById('sPassword'); pw.type = pw.type === 'password' ? 'text' : 'password'; this.classList.toggle('fa-eye-slash');"></i>
 </div>
 </div>
 <div class="form-group">
 <label class="form-label" for="sConfirmPassword">Confirm Password</label>
 <div style="position:relative;">
-<input class="form-control" id="sConfirmPassword" type="password" placeholder="Confirm password" data-custom-required="true" />
+<input class="form-control" id="sConfirmPassword" autocomplete="new-password" type="password" placeholder="Confirm password" data-custom-required="true" />
 <i class="fa-solid fa-eye" id="toggleSConfirmPassword" style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer; color:var(--text-light);" onclick="const pw = document.getElementById('sConfirmPassword'); pw.type = pw.type === 'password' ? 'text' : 'password'; this.classList.toggle('fa-eye-slash');"></i>
 </div>
 </div>
@@ -63,6 +63,6 @@
 </p>
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790326473"></script>
 </body>
 </html>

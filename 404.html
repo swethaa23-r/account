@@ -7,7 +7,7 @@
 <title>404 - Page Not Found</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 <style>
   body {
     background-color: var(--bg-main);
@@ -45,6 +45,17 @@
     margin-bottom: 2.5rem;
     line-height: 1.6;
   }
+  .button-group {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  }
+  @media (max-width: 768px) {
+    .error-code { font-size: 4.5rem; }
+    .error-msg { font-size: 1.25rem; }
+    .error-desc { margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .error-container { padding: 2rem; }
+    .button-group { gap: 0.5rem; flex-direction: column; }
+    .button-group .btn { width: 100%; margin: 0; padding: 0.8rem !important; }
+  }
 </style>
 </head>
 <body>
@@ -53,7 +64,6 @@
 <h1 class="error-code">404</h1>
 <h2 class="error-msg">Oops! Page Not Found</h2>
 <p class="error-desc">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-
-<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;"><button class="btn btn-outline" onclick="history.back()" style="padding: 1rem 2rem; font-size: 1.1rem; cursor:pointer; color:var(--primary) !important;"><i class="fa-solid fa-arrow-left" style="margin-right: 0.5rem;"></i> Go Back</button><a class="btn btn-primary" href="index.html" style="padding: 1rem 2rem; font-size: 1.1rem; color: white !important;"><i class="fa-solid fa-house" style="margin-right: 0.5rem;"></i> Back to Home</a></div></div>
+<div class="button-group"><button class="btn btn-outline" onclick="history.back()" style="padding: 1rem 2rem; font-size: 1.1rem; cursor:pointer; color:var(--primary) !important;"><i class="fa-solid fa-arrow-left" style="margin-right: 0.5rem;"></i> Go Back</button><a class="btn btn-primary" href="index.html" style="padding: 1rem 2rem; font-size: 1.1rem; color: white !important;"><i class="fa-solid fa-house" style="margin-right: 0.5rem;"></i> Back to Home</a></div></div>
 </body>
 </html>

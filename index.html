@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Home | Accounting</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- FontAwesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<!-- AOS Animation CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-<!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | Accounting</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link href="css/style.css?v=1790331390" rel="stylesheet"/>
+    <link href="css/home-new.css?v=1790351753.45674" rel="stylesheet"/>
 </head>
 <body class="preloader-active">
 
+
+<!-- Preloader -->
 <!-- Preloader -->
 <div id="preloader">
-    <div class="preloader-content">
-        <div class="preloader-logo-wrapper">
-            <div class="preloader-glow"></div>
-            <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo">
-        </div>
-        <div class="preloader-bar-container">
-            <div class="preloader-bar"></div>
+    <div class="premium-preloader">
+        <img src="logo-blue.webp" alt="Stackly Logo" class="preloader-logo-anim">
+        <div class="preloader-line">
+            <div class="preloader-line-inner"></div>
         </div>
     </div>
 </div>
@@ -36,7 +35,7 @@
 <div class="container nav-container">
 <a class="logo" href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 <nav class="nav-links">
-<div class="mobile-only-logo" style="display:none; margin-bottom: 2rem;">
+<div class="mobile-only-logo" style="margin-bottom: 2rem;">
     <a href="index.html"><img alt="Logo" src="logo-blue.webp" class="responsive-logo"/></a>
 </div>
 
@@ -46,7 +45,7 @@
 <a class="" href="blog.html">Blog</a>
 <a class="" href="contact.html">Contact</a>
 
-<div class="mobile-only-btn" style="display:none; margin-top: auto; padding-top: 2rem;">
+<div class="mobile-only-btn" style="margin-top: auto; margin-bottom: 2rem; padding-top: 1rem; width: 100%;">
     <a class="btn btn-primary" href="login.html" style="width: 100%; text-align: center;">Login</a>
 </div>
 </nav>
@@ -56,406 +55,461 @@
 </div>
 </div>
 </header>
+
 <main>
-<!-- Section 1: Hero -->
-<section class="hero">
-<div class="container hero-grid">
-<div class="hero-content" data-aos="fade-right">
-<h1>Smarter Accounting. <br/><span style="color:var(--accent);">Stronger Financial Decisions.</span></h1>
-<p>We help businesses expertly manage accounting, taxation, compliance, and comprehensive financial planning for long-term success.</p>
-<div class="hero-buttons">
-<a class="btn" href="contact.html" style="background-color: #0A192F; color: white; border: none; padding: 1rem 2rem; font-weight: 600;">Book a Consultation</a>
-<a class="btn btn-outline" href="services.html" style="margin-left: 15px;">Explore Services</a></div>
-</div>
-<div class="hero-image" data-aos="fade-left" data-aos-delay="200" style="position:relative;">
-<img alt="Financial Planning" loading="lazy" src="images/stackly_img_23.webp"/>
-<!-- Subtle floating financial element -->
-<div style="position:absolute; bottom:-1.5rem; left:-2rem; background:var(--bg-white); padding:1rem 1.5rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:1rem;  z-index:10;">
-<div style="width:45px; height:45px; background:rgba(16, 185, 129, 0.1); color:#10B981; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem;">
-<i class="fa-solid fa-arrow-trend-up"></i>
-</div>
-<div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 2: Trust / Statistics -->
-<section class="section section-white">
-<div class="container grid-4" data-aos="fade-up">
-<div class="stat-item">
-<h2 data-target="500">500+</h2>
-<p>Clients</p>
-</div>
-<div class="stat-item">
-<h2 data-target="10">10+</h2>
-<p>Years Experience</p>
-</div>
-<div class="stat-item">
-<h2 data-target="98">98%</h2>
-<p>Client Satisfaction</p>
-</div>
-<div class="stat-item">
-<h2 data-target="25">25+</h2>
-<p>Financial Experts</p>
-</div>
-</div>
-</section>
-<!-- Section 3: Services Preview -->
-<section class="section section-light">
-<div class="container">
-<div data-aos="zoom-in-up" data-aos-duration="800" style="text-align:center; margin-bottom: 2rem;">
-<h2>Premium Financial Services</h2>
-<p style="max-width:600px; margin:0 auto; color:var(--text-light);">Comprehensive accounting and advisory solutions tailored to drive your business forward.</p>
-</div>
-<div class="grid-3">
-<div class="card" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
-<i class="fa-solid fa-file-invoice-dollar card-icon"></i>
-<h3>Accounting &amp; Bookkeeping</h3>
-<p>Accurate and timely financial recording to keep your business running smoothly.</p>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
-</div>
-<div class="card" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="800">
-<i class="fa-solid fa-scale-balanced card-icon"></i>
-<h3>Tax Planning</h3>
-<p>Strategic tax optimization to minimize liability and maximize returns.</p>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
-</div>
-<div class="card" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="800">
-<i class="fa-solid fa-money-check-dollar card-icon"></i>
-<h3>Payroll Management</h3>
-<p>Automated payroll processing, tax filings, and strict regulatory compliance.</p>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
-</div>
-<div class="card" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="800">
-<i class="fa-solid fa-chart-line card-icon"></i>
-<h3>Financial Consulting</h3>
-<p>Expert advisory services to guide your business towards sustainable growth.</p>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
-</div>
-<div class="card" data-aos="zoom-in-up" data-aos-delay="500" data-aos-duration="800">
-<i class="fa-solid fa-magnifying-glass-chart card-icon"></i>
-<h3>Audit &amp; Compliance</h3>
-<p>Internal audits, risk assessments, and independent financial verification.</p>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
-</div>
-<div class="card" data-aos="zoom-in-up" data-aos-delay="600" data-aos-duration="800">
-<i class="fa-solid fa-briefcase card-icon"></i>
-<h3>Business Advisory</h3>
-<p>Strategic planning, M&amp;A advisory, and operational efficiency analysis.</p>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;">Learn More </a>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 4: Why Choose Us -->
-<section class="section section-white">
-<div class="container grid-2">
-<div data-aos="fade-right">
-<img alt="Professional Financial Meeting" loading="lazy" src="images/stackly_img_24.webp" style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"/>
-</div>
-<div>
-<h2 data-aos="fade-left">Why Businesses Trust Us</h2>
-<p data-aos="fade-left" data-aos-delay="100">We combine deep industry expertise with innovative technology to deliver exceptional financial results.</p>
-<ul style="list-style:none; margin-top:2rem;">
-<li data-aos="fade-left" data-aos-delay="150" style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;">
-<div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
-<h4 style="margin:0; font-size:1.1rem;">Experienced Professionals</h4>
-</li>
-<li data-aos="fade-left" data-aos-delay="250" style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;">
-<div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
-<h4 style="margin:0; font-size:1.1rem;">Transparent Processes</h4>
-</li>
-<li data-aos="fade-left" data-aos-delay="350" style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;">
-<div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
-<h4 style="margin:0; font-size:1.1rem;">Accurate Reporting</h4>
-</li>
-<li data-aos="fade-left" data-aos-delay="450" style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;">
-<div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
-<h4 style="margin:0; font-size:1.1rem;">Strategic Financial Guidance</h4>
-</li>
-<li data-aos="fade-left" data-aos-delay="550" style="margin-bottom:1.25rem; display:flex; gap:1rem; align-items:center;">
-<div style="color:var(--accent); font-size:1.25rem;"><i class="fa-solid fa-check-circle"></i></div>
-<h4 style="margin:0; font-size:1.1rem;">Secure &amp; Confidential</h4>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Section 5: Financial Solutions -->
-<section class="section section-dark">
-<div class="container">
-<div data-aos="fade-up" style="text-align:center; margin-bottom: 2rem;">
-<h2>Financial Solutions</h2>
-<p style="max-width:600px; margin:0 auto;">How we actively transform your financial operations.</p>
-</div>
-<div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
-<div class="card" data-aos="zoom-in" data-aos-delay="100" style="flex: 1 1 30%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
-<i class="fa-solid fa-arrow-up-right-dots" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
-<h3 style="color:white; font-size:1.2rem;">Improve Cash Flow</h3>
-<p style="color:#8892B0; margin:0;">Optimize receivables and payables for better liquidity.</p>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="200" style="flex: 1 1 30%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
-<i class="shake-target fa-solid fa-shield-halved" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
-<h3 style="color:white; font-size:1.2rem;">Reduce Financial Risks</h3>
-<p style="color:#8892B0; margin:0;">Identify and mitigate vulnerabilities in your financial strategy.</p>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="300" style="flex: 1 1 30%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem;">
-<i class="shake-target fa-solid fa-clipboard-check" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
-<h3 style="color:white; font-size:1.2rem;">Simplify Compliance</h3>
-<p style="color:#8892B0; margin:0;">Navigate complex tax laws and regulations effortlessly.</p>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="400" style="flex: 1 1 40%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem; max-width:48%;">
-<i class="shake-target fa-solid fa-chart-pie" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
-<h3 style="color:white; font-size:1.2rem;">Understand Performance</h3>
-<p style="color:#8892B0; margin:0;">Gain clear insights into your business metrics and profitability drivers.</p>
-</div>
-<div class="card" data-aos="zoom-in" data-aos-delay="500" style="flex: 1 1 40%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); color:white; padding:2rem; max-width:48%;">
-<i class="shake-target fa-solid fa-seedling" style="font-size:2rem; color:var(--accent); margin-bottom:1rem;"></i>
-<h3 style="color:white; font-size:1.2rem;">Plan Future Growth</h3>
-<p style="color:#8892B0; margin:0;">Develop robust financial forecasting and strategic scaling plans.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 6: Process -->
-<section class="section section-light">
-<div class="container">
-<div data-aos="fade-up" style="text-align:center; margin-bottom: 2rem;">
-<h2>Our Proven Process</h2>
-<p style="max-width:600px; margin:0 auto; color:var(--text-light);">A streamlined, transparent approach to managing your financial success.</p>
-</div>
-<div class="timeline">
-<div class="timeline-step" data-aos="fade-up" data-aos-delay="100">
-<div class="timeline-icon">01</div>
-<h3>Understand</h3>
-<p style="color:var(--text-light); font-size:0.95rem;">We analyze your business goals and current financial state.</p>
-</div>
-<div class="timeline-step" data-aos="fade-up" data-aos-delay="200">
-<div class="timeline-icon">02</div>
-<h3>Analyze</h3>
-<p style="color:var(--text-light); font-size:0.95rem;">Deep dive into your numbers to identify optimization opportunities.</p>
-</div>
-<div class="timeline-step" data-aos="fade-up" data-aos-delay="300">
-<div class="timeline-icon">03</div>
-<h3>Strategize</h3>
-<p style="color:var(--text-light); font-size:0.95rem;">Develop a tailored plan for tax, growth, and regulatory compliance.</p>
-</div>
-<div class="timeline-step" data-aos="fade-up" data-aos-delay="400">
-<div class="timeline-icon">04</div>
-<h3>Grow</h3>
-<p style="color:var(--text-light); font-size:0.95rem;">Execute the strategy and monitor ongoing financial performance.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 7: Testimonials -->
-<section class="section section-white">
-<div class="container">
-<div data-aos="fade-up" style="text-align:center; margin-bottom: 2rem;">
-<h2>Client Success Stories</h2>
-<p style="max-width:600px; margin:0 auto; color:var(--text-light);">See what our partners say about our financial consulting.</p>
-</div>
-<div class="marquee-container" style="overflow: hidden; white-space: nowrap; width: 100%; position: relative; padding: 2rem 0;"><div class="marquee-track"><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_25.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Elena Rodriguez</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">CEO, TechFlow Solutions</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Marcus Johnson</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">CFO, Global Retail</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"Their audit and compliance team made our latest review entirely stress-free. Professional, secure, and incredibly experienced."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_27.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Sarah Williams</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Founder, Bright Ideas</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_25.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">David Chen</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Director, Nexus Corp</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Emily Carter</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">VP Finance, Alpha Industries</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_25.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Elena Rodriguez</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">CEO, TechFlow Solutions</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Marcus Johnson</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">CFO, Global Retail</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"Their audit and compliance team made our latest review entirely stress-free. Professional, secure, and incredibly experienced."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_27.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Sarah Williams</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Founder, Bright Ideas</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"Stackly transformed our accounting operations. Their strategic tax planning saved us a significant amount of capital, which we reinvested back into growth."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_25.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">David Chen</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">Director, Nexus Corp</p>
-</div>
-</div>
-</div><div class="card testimonial-card" style="white-space: normal; min-width: 350px;">
-<div>
-<div class="testimonial-stars">
-<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-</div>
-<p style="font-style: italic;">"The level of transparency and accurate reporting they provide is unmatched. They act not just as accountants, but as a genuine CFO extension of our team."</p>
-</div>
-<div class="testimonial-author">
-<img alt="Client" loading="lazy" src="images/stackly_img_26.webp"/>
-<div>
-<h4 style="margin:0; font-size:1rem;">Emily Carter</h4>
-<p style="margin:0; font-size:0.85rem; color:var(--text-light);">VP Finance, Alpha Industries</p>
-</div>
-</div>
-</div></div></div>
-</div>
-</section>
-<!-- Section 8: Blog Preview -->
-<section class="section section-light">
-<div class="container">
-<div data-aos="fade-up" style="text-align:center; margin-bottom: 2rem;">
-<h2>Financial Insights</h2>
-<p style="max-width:600px; margin:0 auto; color:var(--text-light);">Latest strategies and accounting updates from our experts.</p>
-</div>
-<div class="grid-3">
-<div class="card" data-aos="fade-up" data-aos-delay="100" style="padding:0; border:none;">
-<img alt="Financial illustration" loading="lazy" src="images/stackly_unique_1.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; font-size:0.85rem;">
-<span class="badge badge-success">Tax Planning</span>
-<span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Oct 12, 2026</span>
-</div>
-<h3 style="font-size:1.25rem;">Tax Planning Strategies for Growing Businesses</h3>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;" style="margin-top:1rem;">Read More </a>
-</div>
-</div>
-<div class="card" data-aos="fade-up" data-aos-delay="200" style="padding:0; border:none;">
-<img alt="Financial illustration" loading="lazy" src="images/stackly_unique_2.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; font-size:0.85rem;">
-<span class="badge badge-warning">Accounting</span>
-<span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Oct 05, 2026</span>
-</div>
-<h3 style="font-size:1.25rem;">How Accurate Bookkeeping Improves Business Decisions</h3>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;" style="margin-top:1rem;">Read More </a>
-</div>
-</div>
-<div class="card" data-aos="fade-up" data-aos-delay="300" style="padding:0; border:none;">
-<img alt="Financial illustration" loading="lazy" src="images/stackly_unique_3.webp" style="width:100%; height:220px; object-fit:cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"/>
-<div style="padding:2rem;">
-<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; font-size:0.85rem;">
-<span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent);">Finance</span>
-<span style="color:var(--text-light);"><i class="fa-regular fa-calendar" style="margin-right:5px;"></i> Sep 28, 2026</span>
-</div>
-<h3 style="font-size:1.25rem;">Financial Planning Mistakes Businesses Should Avoid</h3>
-<a class="card-link" href="404.html" onclick="window.location.href='404.html'; return false;" style="margin-top:1rem;">Read More </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 9: CTA -->
-<section class="section">
-<div class="container">
-<div class="bg-animated" data-aos="zoom-in" style="text-align:center; padding: 6rem 3rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
-<h2 style="color:white;">Ready to Take Control of Your Finances?</h2>
-<p style="margin-bottom:3rem; font-size:1.2rem; max-width:600px; margin-left:auto; margin-right:auto; color:rgba(255,255,255,0.9);">Join the leading businesses that trust Stackly for their accounting and advisory needs.</p>
-<div style="display:flex; justify-content:center;">
-<a class="btn btn-white" href="contact.html" style="color:var(--primary); font-weight:700;">Book a Consultation</a>
-</div>
-</div>
-</div>
-</section>
+    <!-- HERO SECTION -->
+    <section class="hero-new">
+        <div class="container hero-grid-new">
+            <div class="hero-content-new">
+                <div class="hero-subtitle">
+                    <span>Smart Accounting</span> | <span>Better Decisions</span> | <span>Brighter Future</span>
+                </div>
+                <h1>Your Trusted Partner in <br>Accounting & Financial <br><span style="color:var(--accent);">Success</span></h1>
+                <p>We empower businesses, startups, and individuals to take complete control of their financial future. Our expert team delivers precise accounting, proactive tax strategies, and strategic advisory to drive sustainable growth, ensure compliance, and maximize profitability.</p>
+                <div class="hero-buttons-new">
+                    <a class="btn btn-teal" href="contact.html">Get Started <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></a>
+                    <a class="btn btn-outline-white" href="services.html">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-visual-new">
+                <div class="hero-floating-cards">
+                    <div class="hc-card hc-1">
+                        <div class="hc-icon"><i class="fa-solid fa-chart-column"></i></div>
+                        <div class="hc-text">
+                            <span class="hc-title">Revenue Growth</span>
+                            <span class="hc-val">+18.5% <i class="fa-solid fa-arrow-trend-up"></i></span>
+                        </div>
+                    </div>
+                    <div class="hc-card hc-2">
+                        <div class="hc-icon"><i class="fa-solid fa-wallet"></i></div>
+                        <div class="hc-text">
+                            <span class="hc-title">Cash Flow</span>
+                            <span class="hc-val">₹2.4Cr</span>
+                        </div>
+                    </div>
+                    <div class="hc-card hc-3">
+                        <div class="hc-icon"><i class="fa-solid fa-shield-check"></i></div>
+                        <div class="hc-text">
+                            <span class="hc-title">Financial Accuracy</span>
+                            <span class="hc-val">98% <i class="fa-solid fa-check"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/stackly_img_23.webp" alt="Laptop Dashboard" class="hero-laptop-img"/>
+            </div>
+        </div>
+        
+        <!-- Dashboard Overlap -->
+        <div class="container">
+            <div class="dashboard-overlap">
+                <div class="dash-left">
+                    <h3>Your Business <br>At a Glance</h3>
+                    <p>Monitor your cash flow, track expenses, and forecast revenue with our intuitive reporting tools. We transform complex financial data into clear, actionable insights so you can make smarter decisions faster.</p>
+                    <a href="404.html" class="dash-link">View Detailed Reports <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="dash-metrics">
+                    <div class="d-metric">
+                        <div class="dm-icon bg-blue-light"><i class="fa-solid fa-file-invoice"></i></div>
+                        <div class="dm-name">Revenue</div>
+                        <div class="dm-val">₹12,45,000</div>
+                        <div class="dm-trend text-success"><i class="fa-solid fa-arrow-up"></i> 12.5%</div>
+                    </div>
+                    <div class="d-metric">
+                        <div class="dm-icon bg-red-light"><i class="fa-solid fa-calculator"></i></div>
+                        <div class="dm-name">Expenses</div>
+                        <div class="dm-val">₹6,32,000</div>
+                        <div class="dm-trend text-success"><i class="fa-solid fa-arrow-up"></i> 8.2%</div>
+                    </div>
+                    <div class="d-metric">
+                        <div class="dm-icon bg-green-light"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div class="dm-name">Profit</div>
+                        <div class="dm-val">₹6,13,000</div>
+                        <div class="dm-trend text-success"><i class="fa-solid fa-arrow-up"></i> 16.8%</div>
+                    </div>
+                    <div class="d-metric">
+                        <div class="dm-icon bg-purple-light"><i class="fa-solid fa-money-bill"></i></div>
+                        <div class="dm-name">Cash Flow</div>
+                        <div class="dm-val">₹4,20,000</div>
+                        <div class="dm-trend text-success"><i class="fa-solid fa-arrow-up"></i> 11.3%</div>
+                    </div>
+                </div>
+                <div class="dash-chart-img">
+                    <div class="dash-chart-header">
+                        <span>Monthly Overview</span>
+                        <div class="legend"><span class="l-inc">Income</span><span class="l-exp">Expenses</span></div>
+                    </div>
+                    <div class="mock-bar-chart">
+                        <div class="bar-group"><div class="bar bar-inc" style="height:60%"></div><div class="bar bar-exp" style="height:40%"></div><span>Jan</span></div>
+                        <div class="bar-group"><div class="bar bar-inc" style="height:70%"></div><div class="bar bar-exp" style="height:45%"></div><span>Feb</span></div>
+                        <div class="bar-group"><div class="bar bar-inc" style="height:85%"></div><div class="bar bar-exp" style="height:50%"></div><span>Mar</span></div>
+                        <div class="bar-group"><div class="bar bar-inc" style="height:65%"></div><div class="bar bar-exp" style="height:55%"></div><span>Apr</span></div>
+                        <div class="bar-group"><div class="bar bar-inc" style="height:90%"></div><div class="bar bar-exp" style="height:45%"></div><span>May</span></div>
+                        <div class="bar-group"><div class="bar bar-inc" style="height:100%"></div><div class="bar bar-exp" style="height:60%"></div><span>Jun</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section bg-white services-new">
+        <div class="container">
+            <div class="s-header-row">
+                <div class="s-head-left">
+                    <div class="section-badge">Our Services</div>
+                    <h2>Comprehensive Accounting <br>& Financial Services</h2>
+                </div>
+                <div class="s-head-right">
+                    <p>From daily bookkeeping to strategic financial planning, we offer a complete range of services to help your business grow and stay compliant.</p>
+                    <a href="services.html" class="s-link-strong">Explore All Services <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="s-grid-6">
+                <!-- Card 1 -->
+                <div class="s-card" data-aos="fade-up">
+                    <div class="s-icon c-blue"><i class="fa-solid fa-book"></i></div>
+                    <h4>Bookkeeping & Record Management</h4>
+                    <p>We meticulously track every transaction, reconcile accounts, and maintain flawless ledgers so your business stays audit-ready and financially healthy year-round.</p>
+                    <a href="404.html" class="s-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="s-card" data-aos="fade-up">
+                    <div class="s-icon c-teal"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <h4>Tax Preparation & Filing</h4>
+                    <p>Maximize your deductions and eliminate surprises. We handle proactive tax planning, accurate return preparation, and full compliance for corporate and individual tax needs.</p>
+                    <a href="404.html" class="s-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="s-card" data-aos="fade-up">
+                    <div class="s-icon c-orange"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4>Financial Reporting & Analysis</h4>
+                    <p>Receive customized monthly balance sheets, income statements, and cash flow analysis. We turn raw numbers into strategic roadmaps for your business growth.</p>
+                    <a href="404.html" class="s-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 4 -->
+                <div class="s-card" data-aos="fade-up">
+                    <div class="s-icon c-purple"><i class="fa-solid fa-briefcase"></i></div>
+                    <h4>Business Advisory & Planning</h4>
+                    <p>Whether navigating mergers, seeking capital, or restructuring, our Virtual CFO services provide the high-level financial leadership your growing company needs.</p>
+                    <a href="404.html" class="s-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 5 -->
+                <div class="s-card" data-aos="fade-up">
+                    <div class="s-icon c-indigo"><i class="fa-solid fa-users"></i></div>
+                    <h4>Payroll Management</h4>
+                    <p>Streamline your HR operations with our comprehensive payroll solutions, including automated salary processing, direct deposits, and strict adherence to labor laws.</p>
+                    <a href="404.html" class="s-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 6 -->
+                <div class="s-card" data-aos="fade-up">
+                    <div class="s-icon c-green"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Compliance & Regulatory Support</h4>
+                    <p>Safeguard your business against regulatory penalties. We conduct internal audits, manage statutory filings, and implement robust risk management frameworks.</p>
+                    <a href="404.html" class="s-card-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS -->
+    <section class="section bg-light-gray" style="padding: 3rem 0;">
+        <div class="container stats-row">
+            <div class="stat-box">
+                <div class="stat-icon bg-teal-light"><i class="fa-solid fa-users"></i></div>
+                <div class="stat-info">
+                    <h2 class="premium-counter" data-target="500">0</h2>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+                <div class="stat-icon bg-teal-light"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="stat-info">
+                    <h2 class="premium-counter" data-target="10">0</h2>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+                <div class="stat-icon bg-teal-light"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-info">
+                    <h2 class="premium-counter" data-target="98">0</h2>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+                <div class="stat-icon bg-teal-light"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="stat-info">
+                    <h2 class="premium-counter" data-target="25">0</h2>
+                    <p>Expert Professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section bg-white why-new">
+        <div class="container why-grid">
+            <div class="why-left" data-aos="fade-right">
+                <div class="section-badge">Why Businesses Trust Us</div>
+                <h2>More Than Just Numbers, We Build Your Success</h2>
+                <p>Our team of experienced professionals is committed to delivering accurate, transparent and reliable financial solutions that help your business grow with confidence.</p>
+                <a href="about.html" class="btn btn-outline-dark" style="margin-top:1rem;">Learn More <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></a>
+            </div>
+            <div class="why-right">
+                <div class="w-card" data-aos="fade-up">
+                    <div class="w-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <h5>Experienced Professionals</h5>
+                    <p>Our certified accountants and financial advisors bring decades of cross-industry expertise to solve your most complex financial challenges.</p>
+                </div>
+                <div class="w-card" data-aos="fade-up">
+                    <div class="w-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h5>Transparent Processes</h5>
+                    <p>We believe in absolute transparency. You will always understand our fee structures, reporting methodologies, and the exact health of your finances.</p>
+                </div>
+                <div class="w-card" data-aos="fade-up">
+                    <div class="w-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h5>Accurate Reporting</h5>
+                    <p>Precision is our promise. We leverage advanced accounting software to deliver 100% accurate financial statements exactly when you need them.</p>
+                </div>
+                <div class="w-card" data-aos="fade-up">
+                    <div class="w-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h5>Strategic Guidance</h5>
+                    <p>We don't just record the past; we plan the future. Expect proactive alerts, tax-saving suggestions, and actionable business intelligence.</p>
+                </div>
+                <div class="w-card" data-aos="fade-up">
+                    <div class="w-icon"><i class="fa-solid fa-lock"></i></div>
+                    <h5>Secure & Confidential</h5>
+                    <p>We utilize bank-level encryption and strict access controls to ensure your sensitive financial data remains completely secure and confidential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCIAL SOLUTIONS -->
+    <section class="section bg-light-gray fin-sol">
+        <div class="container fin-grid">
+            <div class="fin-left">
+                <div class="section-badge">Financial Solutions</div>
+                <h2>Tailored Solutions for Your Unique Needs</h2>
+                <p>Choose the right solution to simplify your finances and achieve your business goals.</p>
+                <a href="services.html" class="btn btn-outline-teal" style="margin-top:1rem;">View All Solutions <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></a>
+            </div>
+            <div class="fin-right">
+                <div class="fin-boxes">
+                    <div class="f-box" data-aos="zoom-in">
+                        <div class="f-icon" bg-green-light c-green"><i class="fa-solid fa-building"></i></div>
+                        <h5>Small Business</h5>
+                        <p>Streamlined bookkeeping, tax prep, and cash flow management designed to help local businesses scale profitably without the overhead of an in-house team.</p>
+                        <a href="404.html" class="f-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="f-box" data-aos="zoom-in">
+                        <div class="f-icon" bg-purple-light c-purple"><i class="fa-solid fa-industry"></i></div>
+                        <h5>Mid-sized Business</h5>
+                        <p>Advanced enterprise reporting, departmental budgeting, and dedicated advisory to navigate complex operational expansions and market shifts.</p>
+                        <a href="404.html" class="f-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="f-box" data-aos="zoom-in">
+                        <div class="f-icon" bg-teal-light c-teal"><i class="fa-solid fa-rocket"></i></div>
+                        <h5>Startups</h5>
+                        <p>From entity formation and cap table management to securing seed funding, we build the robust financial infrastructure agile startups need to thrive.</p>
+                        <a href="404.html" class="f-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="f-box" data-aos="zoom-in">
+                        <div class="f-icon" bg-blue-light c-blue"><i class="fa-solid fa-user"></i></div>
+                        <h5>Individual</h5>
+                        <p>Comprehensive wealth management, estate planning, and personal tax optimization to secure your family's legacy and maximize your net worth.</p>
+                        <a href="404.html" class="f-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="fin-img">
+                    <img src="images/stackly_img_24.webp" alt="Financial Planning" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section bg-white process-new">
+        <div class="container process-grid">
+            <div class="proc-left">
+                <div class="section-badge">Our Process</div>
+                <h2>Simple Steps to Your Financial Success</h2>
+            </div>
+            <div class="proc-right">
+                <div class="proc-steps">
+                    <div class="p-step" data-aos="fade-up">
+                        <div class="p-icon"><i class="fa-regular fa-clipboard"></i> <span class="p-num">01</span></div>
+                        <h5>Understand</h5>
+                        <p>We start with a deep dive into your current financial health, operational bottlenecks, and long-term business goals.</p>
+                    </div>
+                    <div class="p-line"></div>
+                    <div class="p-step" data-aos="fade-up">
+                        <div class="p-icon"><i class="fa-solid fa-magnifying-glass-chart"></i> <span class="p-num">02</span></div>
+                        <h5>Analyze</h5>
+                        <p>Our experts conduct a rigorous audit of your ledgers and tax history to identify risks, inefficiencies, and hidden opportunities.</p>
+                    </div>
+                    <div class="p-line"></div>
+                    <div class="p-step" data-aos="fade-up">
+                        <div class="p-icon"><i class="fa-solid fa-chess-knight"></i> <span class="p-num">03</span></div>
+                        <h5>Strategize</h5>
+                        <p>We design a bespoke financial roadmap, implementing the right software stack, tax strategies, and reporting workflows for you.</p>
+                    </div>
+                    <div class="p-line"></div>
+                    <div class="p-step" data-aos="fade-up">
+                        <div class="p-icon"><i class="fa-solid fa-chart-line"></i> <span class="p-num">04</span></div>
+                        <h5>Grow</h5>
+                        <p>We act as your ongoing financial partner, monitoring KPIs, optimizing cash flow, and proactively advising you as you scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section bg-light-gray testi-new">
+        <div class="container testi-grid">
+            <div class="testi-left">
+                <div class="section-badge">What Our Clients Say</div>
+                <h2>Trusted by Businesses Across Industries</h2>
+                <p>Real stories. Real results. See what our clients have to say about working with us.</p>
+            </div>
+            <div class="testi-right">
+                <div class="testi-carousel-wrapper">
+                    <button class="t-btn t-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="t-carousel">
+                        <div class="t-card" data-aos="fade-up">
+                            <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"Stackly has been a game-changer for our business. Their team is professional, responsive and always ready to help. Highly recommended!"</p>
+                            <div class="t-author">
+                                <img src="images/stackly_img_25.webp" alt="Priya Sharma"/>
+                                <div>
+                                    <h6>Priya Sharma</h6>
+                                    <span>CEO, SmartLeaf Technologies</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t-card" data-aos="fade-up">
+                            <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"Accurate, reliable and truly professional. They manage our finances with care."</p>
+                            <div class="t-author">
+                                <img src="images/stackly_img_26.webp" alt="Rohit Mehta"/>
+                                <div>
+                                    <h6>Rohit Mehta</h6>
+                                    <span>Founder, BrightCore Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="t-card" data-aos="fade-up">
+                            <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"Their insights into tax strategy saved us thousands this quarter. A phenomenal financial partner that truly understands our goals."</p>
+                            <div class="t-author">
+                                <img src="images/stackly_img_27.webp" alt="Amit Patel"/>
+                                <div>
+                                    <h6>Amit Patel</h6>
+                                    <span>CFO, TechNova Industries</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t-card" data-aos="fade-up">
+                            <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"Streamlined our entire bookkeeping process in just weeks. The clarity we now have over our cash flow is simply outstanding."</p>
+                            <div class="t-author">
+                                <img src="images/stackly_img_23.webp" alt="Sarah Jenkins"/>
+                                <div>
+                                    <h6>Sarah Jenkins</h6>
+                                    <span>Operations Manager, NextGen Retail</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t-card" data-aos="fade-up">
+                            <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"We finally feel in control of our finances. Their advisory services have helped us scale seamlessly without worrying about compliance."</p>
+                            <div class="t-author">
+                                <img src="images/stackly_img_24.webp" alt="David Chen"/>
+                                <div>
+                                    <h6>David Chen</h6>
+                                    <span>Managing Director, Horizon Group</span>
+                                </div>
+                            </div>
+                        </div>
+</div>
+                    <button class="t-btn t-next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST INSIGHTS -->
+    <section class="section bg-white blog-new">
+        <div class="container">
+            <div class="blog-header-row">
+                <div class="b-head-left">
+                    <div class="section-badge">Latest Insights</div>
+                    <h2>Read Our Latest Articles</h2>
+                </div>
+                <div class="b-head-right" style="text-align:right;">
+                    <a href="blog.html" class="s-link-strong">View All Blogs <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="b-grid-3">
+                <div class="b-card-hz" data-aos="fade-up">
+                    <img src="images/stackly_unique_1.webp" alt="Blog 1"/>
+                    <div class="b-content">
+                        <div class="b-meta"><span class="badge badge-success">Accounting</span> <span class="b-date">Apr 12, 2026</span></div>
+                        <h5>5 Essential Bookkeeping Tips for Small Businesses</h5>
+                        <p style="font-size:0.85rem; color:#64748B; margin-bottom:1rem;">Discover how separating personal finances and automating data entry can save you hours of administrative work and protect your cash flow.</p>
+                        <a href="404.html" class="s-card-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="b-card-hz" data-aos="fade-up">
+                    <img src="images/stackly_unique_2.webp" alt="Blog 2"/>
+                    <div class="b-content">
+                        <div class="b-meta"><span class="badge badge-warning">Tax</span> <span class="b-date">Apr 08, 2026</span></div>
+                        <h5>Latest Tax Updates You Should Know in 2026</h5>
+                        <p style="font-size:0.85rem; color:#64748B; margin-bottom:1rem;">Stay ahead of the curve. Learn about the new corporate deduction limits and compliance mandates taking effect this fiscal year.</p>
+                        <a href="404.html" class="s-card-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="b-card-hz" data-aos="fade-up">
+                    <img src="images/stackly_unique_3.webp" alt="Blog 3"/>
+                    <div class="b-content">
+                        <div class="b-meta"><span class="badge" style="background:rgba(0,102,255,0.1); color:var(--accent);">Finance</span> <span class="b-date">Apr 02, 2026</span></div>
+                        <h5>How Financial Planning Builds Long-Term Wealth</h5>
+                        <p style="font-size:0.85rem; color:#64748B; margin-bottom:1rem;">Strategic wealth building requires more than just saving. Explore how diversified asset allocation and proactive tax strategy multiply your net worth.</p>
+                        <a href="404.html" class="s-card-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-new">
+        <div class="container cta-flex">
+            <div class="cta-left">
+                <div class="section-badge" style="color:white; background:rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 4px; display:inline-block;">Get Started Today</div>
+                <h2>Ready to Take Control<br>of Your Finances?</h2>
+            </div>
+            <div class="cta-mid">
+                <p>Book a free consultation with our experts and take the first step towards a stronger financial future.</p>
+                <a href="contact.html" class="btn btn-teal">Book a Consultation <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+            </div>
+            <div class="cta-right">
+                <ul class="cta-list">
+                    <li><i class="fa-solid fa-check-circle text-teal"></i> Free Consultation</li>
+                    <li><i class="fa-solid fa-check-circle text-teal"></i> Personalized Solutions</li>
+                    <li><i class="fa-solid fa-check-circle text-teal"></i> Ongoing Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
+
 <!-- Footer -->
 <footer class="footer" style="background-color: #0A192F; color: white; padding-top: 2rem;">
 <div class="container grid-4">
@@ -514,9 +568,11 @@
 </div>
 </div>
 </footer>
-<!-- AOS Animation JS -->
+
+<!-- GSAP & AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- Custom JS -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790352110.49469"></script>
 </body>
 </html>

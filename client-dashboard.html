@@ -2,12 +2,29 @@
 
 <html lang="en">
 <head>
+<script>
+// Authentication Guard
+(function(){
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const role = localStorage.getItem('userRole');
+    if(isLoggedIn !== 'true') {
+        window.location.href = 'login.html';
+    } else {
+        const pageName = window.location.pathname.split('/').pop() || 'admin-dashboard.html';
+        if(pageName.includes('admin') && role !== 'admin') {
+            window.location.href = 'client-dashboard.html';
+        } else if(pageName.includes('client') && role !== 'client') {
+            window.location.href = 'admin-dashboard.html';
+        }
+    }
+})();
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Client Portal | Accounting</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="css/style.css" rel="stylesheet"/>
+<link href="css/style.css?v=1790326235" rel="stylesheet"/>
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -24,6 +41,8 @@
 <a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'reports')"><i class="fa-solid fa-chart-bar"></i> Reports</a>
 <a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'documents')"><i class="fa-solid fa-folder-open"></i> Documents</a>
 <a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'messages')"><i class="fa-solid fa-envelope"></i> Messages</a>
+<a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'appointments')"><i class="fa-solid fa-calendar-check"></i> Appointments</a>
+<a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'support')"><i class="fa-solid fa-headset"></i> Support</a>
 <a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'settings')"><i class="fa-solid fa-gear"></i> Settings</a>
 <a class="dash-nav-item-mega" href="#" onclick="switchTab(event, 'logout')" style="margin-top:20px; color:#fca5a5;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </nav>
@@ -31,8 +50,8 @@
 <div class="dash-main-mega">
 <header class="dash-header-mega">
 <div style="display:flex; align-items:center; gap:20px;">
-<button class="dashboard-mobile-toggle" style="background:none; border:none; font-size:1.5rem; color:var(--text-main); cursor:pointer;" onclick="document.getElementById('sidebar').classList.add('open'); document.getElementById('dashOverlay').style.display='block';"><i class="fa-solid fa-bars"></i></button>
-<a href="index.html" class="dash-mobile-logo" style="display:none;"><img alt="Logo" src="logo-blue.webp" style="height: 30px; width: auto;"/></a>
+<button aria-label="Action" class="dashboard-mobile-toggle" style="background:none; border:none; font-size:1.5rem; color:var(--text-main); cursor:pointer;" onclick="document.getElementById('sidebar').classList.add('open'); document.getElementById('dashOverlay').style.display='block';"><i class="fa-solid fa-bars"></i></button>
+<a href="index.html" class="dash-mobile-logo"><img alt="Logo" src="logo-blue.webp" style="height: 30px; width: auto;"/></a>
 <form class="dash-header-search-mega" data-success-action="404" novalidate="novalidate">
 <i class="fa-solid fa-magnifying-glass" style="color:var(--text-light);"></i>
 <input data-custom-required="true" id="dynamicField_client-dashboard_1" placeholder="Search resources, clients, reports..." type="text" data-custom-required="true"/>
@@ -40,7 +59,7 @@
 </div>
 <div style="display:flex; align-items:center; gap:20px;">
 <i class="fa-solid fa-bell" onclick="window.location.href='404.html'" style="font-size:1.2rem; color:var(--text-light); cursor:pointer;"></i>
-<div style="display:flex; align-items:center; gap:10px;">
+<div style="display:flex; align-items:center; gap:10px; cursor:pointer;" onclick="switchTab(event, 'settings')">
 <i class="fa-solid fa-circle-user" style="font-size:2rem; color:var(--primary);"></i>
 <span id="profileNameDisplay" style="font-weight:600; font-size:0.95rem;">Admin User</span>
 </div>
@@ -62,7 +81,7 @@
 <div class="dash-grid-2-mega">
 <div class="dash-card-mega">
 <h3>Pending Tasks</h3>
-<div style="display:flex; flex-direction:column; gap:10px;">
+<div class="dash-stacked-form">
 <div style="display:flex; justify-content:space-between; padding:10px; background:#fff7ed; border-left:4px solid #f97316; border-radius:4px;">
 <span>Pay Invoice #INV-9921</span><button class="action-btn action-edit" onclick="window.location.href='404.html'" style="padding:4px 8px;" type="button">Pay Now</button>
 </div>
@@ -84,24 +103,70 @@
 <div class="dash-card-mega"><div class="dash-card-title-mega">Operating Expenses</div><div class="dash-card-value-mega" style="color:#b91c1c;">$63,800</div></div>
 <div class="dash-card-mega"><div class="dash-card-title-mega">Net Profit</div><div class="dash-card-value-mega" style="color:green;">$86,200</div></div>
 </div>
+<div class="dash-grid-2-mega" style="margin-top:2rem;">
+<div class="dash-card-mega">
+<h3>Cash Flow Projections</h3>
+<div style="height:250px; display:flex; align-items:flex-end; gap:10px; padding-top:20px;">
+<div style="flex:1; background:#3b82f6; height:60%; border-radius:4px 4px 0 0;"></div>
+<div style="flex:1; background:#3b82f6; height:80%; border-radius:4px 4px 0 0;"></div>
+<div style="flex:1; background:#3b82f6; height:70%; border-radius:4px 4px 0 0;"></div>
+<div style="flex:1; background:#10b981; height:90%; border-radius:4px 4px 0 0;"></div>
+</div>
+<div style="display:flex; justify-content:space-between; margin-top:10px; color:var(--text-light); font-size:0.85rem;">
+<span>Q1</span><span>Q2</span><span>Q3</span><span>Q4 (Proj)</span>
+</div>
+</div>
+<div class="dash-card-mega">
+<h3>Upcoming Liabilities</h3>
+<ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:15px; margin-top:15px;">
+<li style="display:flex; justify-content:space-between; padding-bottom:10px; border-bottom:1px solid #eee;">
+<div><strong>Estimated Quarterly Tax</strong><br><span style="font-size:0.85rem; color:var(--text-light);">Due Jan 15, 2027</span></div>
+<div style="color:#b91c1c; font-weight:600;">$12,400</div>
+</li>
+<li style="display:flex; justify-content:space-between; padding-bottom:10px; border-bottom:1px solid #eee;">
+<div><strong>Payroll Tax Deposit</strong><br><span style="font-size:0.85rem; color:var(--text-light);">Due Dec 5, 2026</span></div>
+<div style="color:#b91c1c; font-weight:600;">$3,200</div>
+</li>
+<li style="display:flex; justify-content:space-between; padding-bottom:10px;">
+<div><strong>Software Subscriptions</strong><br><span style="font-size:0.85rem; color:var(--text-light);">Auto-renewal in Nov</span></div>
+<div style="color:#b91c1c; font-weight:600;">$850</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="dash-section-mega" id="invoices">
 <h2 style="margin-bottom:1.5rem;">My Invoices</h2>
-<form class="dash-card-mega" data-success-action="404" novalidate="novalidate" style="display:flex; gap:15px; align-items:center;">
+<div class="dash-grid-4-mega" style="margin-bottom:2rem;">
+<div class="dash-card-mega"><div class="dash-card-title-mega">Total Paid</div><div class="dash-card-value-mega">$24,800</div></div>
+<div class="dash-card-mega"><div class="dash-card-title-mega">Outstanding</div><div class="dash-card-value-mega" style="color:orange;">$4,500</div></div>
+<div class="dash-card-mega"><div class="dash-card-title-mega">Next Due Date</div><div class="dash-card-value-mega">Nov 20</div></div>
+<div class="dash-card-mega"><div class="dash-card-title-mega">Autopay</div><div class="dash-card-value-mega" style="font-size:1.4rem; color:green;">Enabled</div></div>
+</div>
+<form class="dash-card-mega dash-inline-form" data-success-action="404" novalidate="novalidate">
 <input id="dynamicField_client-dashboard_2" placeholder="Search Invoices..." style="padding:8px 12px; border:1px solid #ccc; border-radius:4px; flex:1;" type="text" data-custom-required="true"/>
 <button class="action-btn action-view" style="padding:8px 20px;" type="submit">Filter</button>
 </form>
 <div class="dash-card-mega table-wrap-mega">
 <h3>Invoice History</h3>
 <table class="dash-table-mega">
-<tr><th>ID</th><th>Amount</th><th>Status</th><th>Actions</th></tr>
-<tr><td>#INV-9921</td><td>$4,500.00</td><td><span class="badge badge-warning">Pending</span></td><td><button class="action-btn action-edit" onclick="window.location.href='404.html'" type="button">Pay</button></td></tr>
+<tr><th>ID</th><th>Amount</th><th>Due Date</th><th>Status</th><th>Actions</th></tr>
+<tr><td>#INV-9921</td><td>$4,500.00</td><td>Nov 20, 2026</td><td><span class="badge badge-warning">Pending</span></td><td><button class="action-btn action-edit" onclick="window.location.href='404.html'" type="button">Pay</button></td></tr>
+<tr><td>#INV-9905</td><td>$2,200.00</td><td>Oct 15, 2026</td><td><span class="badge badge-success">Paid</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><td>#INV-9880</td><td>$3,150.00</td><td>Sep 10, 2026</td><td><span class="badge badge-success">Paid</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><td>#INV-9852</td><td>$4,500.00</td><td>Aug 15, 2026</td><td><span class="badge badge-success">Paid</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><td>#INV-9810</td><td>$1,850.00</td><td>Jul 20, 2026</td><td><span class="badge badge-success">Paid</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
 </table>
 </div>
 </div>
 <div class="dash-section-mega" id="transactions">
 <h2 style="margin-bottom:1.5rem;">Transaction History</h2>
-<form class="dash-card-mega" data-success-action="404" novalidate="novalidate" style="display:flex; gap:15px; align-items:center;">
+<div class="dash-grid-3-mega" style="margin-bottom:2rem;">
+<div class="dash-card-mega"><div class="dash-card-title-mega">Total Incoming</div><div class="dash-card-value-mega" style="color:green;">$142,500</div></div>
+<div class="dash-card-mega"><div class="dash-card-title-mega">Total Outgoing</div><div class="dash-card-value-mega" style="color:#b91c1c;">$56,300</div></div>
+<div class="dash-card-mega"><div class="dash-card-title-mega">Avg. Monthly Spent</div><div class="dash-card-value-mega">$4,690</div></div>
+</div>
+<form class="dash-card-mega dash-inline-form" data-success-action="404" novalidate="novalidate">
 <input id="dynamicField_client-dashboard_3" placeholder="Search Transactions..." style="padding:8px 12px; border:1px solid #ccc; border-radius:4px; flex:1;" type="text" data-custom-required="true"/>
 <select id="dynamicField_client-dashboard_4" style="padding:8px 12px; border:1px solid #ccc; border-radius:4px;" data-custom-required="true"><option>All Categories</option></select>
 <button class="action-btn action-view" style="padding:8px 20px;" type="submit">Search</button>
@@ -109,8 +174,12 @@
 <div class="dash-card-mega table-wrap-mega">
 <h3>Recent Transactions</h3>
 <table class="dash-table-mega">
-<tr><th>ID</th><th>Category</th><th>Amount</th></tr>
-<tr><td>#TRX-101</td><td>Consulting</td><td style="color:green;">+$4,200.00</td></tr>
+<tr><th>ID</th><th>Date</th><th>Category</th><th>Amount</th><th>Status</th></tr>
+<tr><td>#TRX-101</td><td>Oct 24, 2026</td><td>Consulting</td><td style="color:green;">+$4,200.00</td><td><span class="badge badge-success">Completed</span></td></tr>
+<tr><td>#TRX-100</td><td>Oct 22, 2026</td><td>Software License</td><td style="color:#b91c1c;">-$350.00</td><td><span class="badge badge-success">Completed</span></td></tr>
+<tr><td>#TRX-099</td><td>Oct 18, 2026</td><td>Office Supplies</td><td style="color:#b91c1c;">-$1,120.50</td><td><span class="badge badge-success">Completed</span></td></tr>
+<tr><td>#TRX-098</td><td>Oct 15, 2026</td><td>Client Retainer</td><td style="color:green;">+$8,000.00</td><td><span class="badge badge-success">Completed</span></td></tr>
+<tr><td>#TRX-097</td><td>Oct 10, 2026</td><td>Marketing Ads</td><td style="color:#b91c1c;">-$2,400.00</td><td><span class="badge badge-success">Completed</span></td></tr>
 </table>
 </div>
 </div>
@@ -118,7 +187,7 @@
 <h2 style="margin-bottom:1.5rem;">My Reports</h2>
 <div class="dash-card-mega">
 <h3>Generate Custom Report</h3>
-<form data-success-action="404" novalidate="novalidate" style="display:flex; gap:15px; margin-top:10px;">
+<form data-success-action="404" novalidate="novalidate" class="dash-inline-form">
 <input data-custom-required="true" id="dynamicField_client-dashboard_5" style="padding:8px 12px; border:1px solid #ccc; border-radius:4px;" type="date" data-custom-required="true"/>
 <button class="action-btn action-edit" style="padding:8px 20px;" type="submit">Generate</button>
 </form>
@@ -128,8 +197,8 @@
       <div class="dash-table-wrapper-mega">
           <table>
               <tr><th>Report Type</th><th>Date</th><th>Status</th><th>Download</th></tr>
-              <tr><td>Tax Summary 2026</td><td>Nov 10, 2026</td><td><span class="badge badge-success">Ready</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button"><i class="fa-solid fa-download"></i></button></td></tr>
-              <tr><td>P&L Statement Q2</td><td>Jul 15, 2026</td><td><span class="badge badge-success">Ready</span></td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button"><i class="fa-solid fa-download"></i></button></td></tr>
+              <tr><td>Tax Summary 2026</td><td>Nov 10, 2026</td><td><span class="badge badge-success">Ready</span></td><td><button aria-label="Action" class="action-btn action-view" onclick="window.location.href='404.html'" type="button"><i class="fa-solid fa-download"></i></button></td></tr>
+              <tr><td>P&L Statement Q2</td><td>Jul 15, 2026</td><td><span class="badge badge-success">Ready</span></td><td><button aria-label="Action" class="action-btn action-view" onclick="window.location.href='404.html'" type="button"><i class="fa-solid fa-download"></i></button></td></tr>
           </table>
       </div>
   </div>
@@ -160,8 +229,12 @@
 <div class="dash-card-mega table-wrap-mega">
 <h3>Secure Files</h3>
 <table class="dash-table-mega">
-<tr><th>File Name</th><th>Actions</th></tr>
-<tr><td>ID_Verification.pdf</td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><th>File Name</th><th>Type</th><th>Size</th><th>Date</th><th>Actions</th></tr>
+<tr><td><i class="fa-solid fa-file-pdf" style="color:#ef4444; margin-right:8px;"></i> ID_Verification.pdf</td><td>Identity</td><td>2.4 MB</td><td>Oct 15, 2026</td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><td><i class="fa-solid fa-file-excel" style="color:#10b981; margin-right:8px;"></i> Q3_Expenses.xlsx</td><td>Financials</td><td>1.1 MB</td><td>Oct 10, 2026</td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><td><i class="fa-solid fa-file-pdf" style="color:#ef4444; margin-right:8px;"></i> Tax_Return_2025.pdf</td><td>Tax Docs</td><td>5.8 MB</td><td>Apr 12, 2026</td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><td><i class="fa-solid fa-file-word" style="color:#3b82f6; margin-right:8px;"></i> Retainer_Agreement.docx</td><td>Contracts</td><td>0.5 MB</td><td>Jan 05, 2026</td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
+<tr><td><i class="fa-solid fa-image" style="color:#f59e0b; margin-right:8px;"></i> Business_License.png</td><td>Legal</td><td>3.2 MB</td><td>Jan 02, 2026</td><td><button class="action-btn action-view" onclick="window.location.href='404.html'" type="button">View</button></td></tr>
 </table>
 </div>
 </div>
@@ -211,12 +284,61 @@
   </div>
 
 </div>
+<div class="dash-section-mega" id="appointments">
+<h2 style="margin-bottom:1.5rem;">My Appointments</h2>
+<div class="dash-grid-2-mega">
+<div class="dash-card-mega">
+<h3>Schedule Consultation</h3>
+<form class="dash-stacked-form" data-success-action="404" novalidate="novalidate">
+<label>Select Date</label>
+<input type="date" style="padding:8px; border:1px solid #ccc; border-radius:4px;" data-custom-required="true" id="dynamicField_client-dashboard_11">
+<label>Select Time</label>
+<select style="padding:8px; border:1px solid #ccc; border-radius:4px;" data-custom-required="true" id="dynamicField_client-dashboard_12">
+<option>10:00 AM</option>
+<option>02:00 PM</option>
+</select>
+<button class="action-btn action-view" type="submit">Book Now</button>
+</form>
+</div>
+<div class="dash-card-mega">
+<h3>Upcoming Meetings</h3>
+<ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;">
+<li style="padding:10px; background:#f8fafc; border-left:3px solid var(--accent); border-radius:4px;">
+<strong>Q3 Tax Review</strong><br>
+<span style="color:var(--text-light); font-size:0.9rem;">Nov 12, 10:00 AM - Zoom</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="dash-section-mega" id="support">
+<h2 style="margin-bottom:1.5rem;">Help &amp; Support</h2>
+<div class="dash-card-mega">
+<h3>Submit a Support Ticket</h3>
+<form class="dash-stacked-form" data-success-action="404" novalidate="novalidate">
+<label>Subject</label>
+<input type="text" placeholder="Brief description of the issue" style="padding:8px; border:1px solid #ccc; border-radius:4px;" data-custom-required="true" id="dynamicField_client-dashboard_13">
+<label>Details</label>
+<textarea placeholder="Provide more details..." style="padding:8px; border:1px solid #ccc; border-radius:4px; height:80px;" data-custom-required="true" id="dynamicField_client-dashboard_14"></textarea>
+<button class="action-btn action-edit" style="width:150px;" type="submit">Submit Ticket</button>
+</form>
+</div>
+<div class="dash-card-mega table-wrap-mega" style="margin-top:2rem;">
+<h3>My Tickets</h3>
+<table class="dash-table-mega">
+<tr><th>Ticket ID</th><th>Subject</th><th>Status</th></tr>
+<tr><td>#TK-103</td><td>Tax Form inquiry</td><td><span class="badge badge-success">Closed</span></td></tr>
+</table>
+</div>
+</div>
+
 <div class="dash-section-mega" id="settings">
 <h2 style="margin-bottom:1.5rem;">Account Settings</h2>
 <div class="dash-grid-2-mega">
 <form class="dash-card-mega" data-success-action="profile_success" novalidate="novalidate">
 <h3>Profile Preferences</h3>
-<div style="display:flex; flex-direction:column; gap:10px;">
+<div class="dash-stacked-form">
 <label>Full Name</label><input data-custom-required="true" id="dynamicField_client-dashboard_7" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="text" value="Elena Rodriguez"/>
 <label>Contact Email</label><input data-custom-required="true" id="dynamicField_client-dashboard_8" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="email" value="elena@techflow.com"/>
 <button class="action-btn action-view" style="width:120px;" type="submit">Save Changes</button>
@@ -224,7 +346,7 @@
 </form>
 <form class="dash-card-mega" data-success-action="password_success" novalidate="novalidate">
 <h3>Security &amp; Password</h3>
-<div style="display:flex; flex-direction:column; gap:10px;">
+<div class="dash-stacked-form">
 <label>Current Password</label><input data-custom-required="true" id="dynamicField_client-dashboard_9" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="password"/>
 <label>New Password</label><input data-custom-required="true" id="dynamicField_client-dashboard_10" style="padding:8px; border:1px solid #ccc; border-radius:4px;" type="password"/>
 <button class="action-btn action-edit" style="width:150px;" type="submit">Update Password</button>
@@ -297,7 +419,7 @@
     }
 
     </script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=1790326473"></script>
 <script src="js/dashboard.js"></script>
 </body>
 </html>
